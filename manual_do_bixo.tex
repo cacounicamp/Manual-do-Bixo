@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt, twocolumn]{article}
+\documentclass[a4paper,10pt, twocolumn, twoside]{article}
 \usepackage{fullpage}
 %\usepackage[scaled=0.85]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -16,9 +16,24 @@
     pdfborder=0 0 0
 }
 \usepackage{multicol}
+\usepackage{fancyhdr}
 
+%%%%% Headers and Footers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE, RO]{Manual do Bixo}
+\fancyhead[RE, LO]{\leftmark}
+\fancyfoot[EL, OR]{\thepage}
+\fancyfoot[RE, LO]{CACo - Centro Acadêmico da Computação}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+\renewcommand{\headsep}{15pt}
+\renewcommand{\footskip}{30pt}
+\renewcommand{\textheight}{642pt}
+\renewcommand{\voffset}{0pt}
 
 \begin{document}
+
 
 \onecolumn
 
