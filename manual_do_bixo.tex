@@ -1,11 +1,12 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,10pt, twocolumn]{article}
 \usepackage{fullpage}
-\usepackage[scaled=0.85]{helvet}
+%\usepackage[scaled=0.85]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[brazil]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[pdftex]{graphicx}
 \usepackage{url,color,float}
 \usepackage{multirow}
@@ -14,7 +15,8 @@
     colorlinks=false,
     pdfborder=0 0 0
 }
-\usepackage{tabularx}
+%\usepackage{tabularx}
+\usepackage{multicol}
 \newcolumntype{Y}{>{\raggedright}X}
 
 
@@ -35,37 +37,9 @@ disponibilizada para facilitar a consulta.
 
 Aproveite!
 
-\section{Índice:}
-\begin{enumerate}
-    \item  Boas vindas
-    \item  Mensagem do Diretor da FEEC
-    \item  Mensagem do Diretor do IC
-    \item  Para pensar
-    \item  Lugares para morar
-    \item  Comida
-    \item  Diversão
-    \item  Transporte
-    \item  Outras necessidades
-    \item  SIGLAS malucas
-    \item  Cancelamento, trancamento e desistência. Há alguma diferença?
-    \item  Lugares para estudar
-    \item  Melhores banheiros
-    \item  Serviços da Unicamp
-    \item  Agora eu tenho um email da Unicamp
-    \item  Iniciação Científica
-    \item  Intercâmbio
-    \item  Eletivas e Proficiência
-    \item  Cuidado com CR e Reprovação
-    \item  Grupos e Entidades da Unicamp
-    \item  Conpec
-    \item  Atlética -- AAACEC
-    \item  Centro Acadêmico da Computação
-    \item  Jornal da Unicamp
-    \item  Eventos da Unicamp
-    \item  Onde comprar "coisas" na Unicamp
-    \item  Pra que que eu estou estudando isso??
-\end{enumerate}
+\tableofcontents
 
+\twocolumn
 \section{Bem-vindo a um mundo novo!}
 Olá, bixo! Agora que você está na faculdade verá que aquele estereótipo de nerd
 não lhe garante boas notas e que o lugar onde você mais vai aprender não
@@ -73,7 +47,7 @@ não lhe garante boas notas e que o lugar onde você mais vai aprender não
 dependerá de você, desde quais matérias quer cursar até quando vai estudar para
 as provas. Portanto, leia isto com atenção.
 
-Os professores (excetuando o Ary do IMECC, o José Mario da FEEC e o Cid do IC)
+Os professores (excetuando o Ary do IMECC, o José Mario da FEEC e o Cid (e alguns outros) do IC)
 dificilmente saberão seu nome ou quem é você; provavelmente, eles somente verão
 no final do semestre se o RA 117654  passou ou não passou. Mas não se sinta
 desamparado, afinal, você também vai logo esquecer a matéria dele! O quanto você
@@ -2383,12 +2357,15 @@ e outros termos muito usados dentro da Unicamp. Aí vão eles:
 \end{itemize}
 
 \subsection{Siglas de salas de aula}
-A tabela abaixo contem algumas siglas de salas de aula que aparecem nos cadernos
+A tabela~\ref{tab:institutos} contém algumas siglas de salas de aula que aparecem nos cadernos
 de horários, disponibilizados pelas coordenadorias dos cursos e pela DAC.
 
-\begin{tabularx}{\linewidth}{|Y|Y|Y|}\hline
+\begin{center}
+\begin{table*}[ht!]
+{
+\begin{tabular}{|l|p{6cm}|p{8cm}|}\hline
 
-\multicolumn{}{|l|}{ \textbf{Siglas e locais das Salas de Aula no horário}}\tabularnewline \hline
+\multicolumn{3}{|c|}{ \textbf{Siglas e locais das Salas de Aula no horário}}\tabularnewline \hline
 
  \textbf{Sigla}  &  \textbf{Local}  &  \textbf{Referência}\tabularnewline \hline
 
@@ -2428,8 +2405,13 @@ de horários, disponibilizados pelas coordenadorias dos cursos e pela DAC.
 
  PB  &  Ciclo Básico II, Prédio Básico  &  Praça Central, em frente ao Bandejão.\tabularnewline \hline
 
-\end{tabularx}
-
+\end{tabular}
+}
+\hfill{}
+\caption{Siglas das salas de aula}
+\label{tab:institutos}
+\end{table*}
+\end{center}
 \section{Cancelamento, trancamento e desistência. Há alguma diferença?}
 Existe várias coisas diferentes que o aluno pode fazer com a sua matrícula.
 Aliás, o próprio processo de matrícula (em que o aluno pode escolher, e alterar
