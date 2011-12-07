@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt, twocolumn]{article}
+\documentclass[a4paper,10pt, twocolumn]{article}
 \usepackage{fullpage}
 %\usepackage[scaled=0.85]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -15,7 +15,8 @@
     colorlinks=false,
     pdfborder=0 0 0
 }
-\usepackage{tabularx}
+%\usepackage{tabularx}
+\usepackage{multicol}
 \newcolumntype{Y}{>{\raggedright}X}
 
 
@@ -2356,12 +2357,15 @@ e outros termos muito usados dentro da Unicamp. Aí vão eles:
 \end{itemize}
 
 \subsection{Siglas de salas de aula}
-A tabela abaixo contem algumas siglas de salas de aula que aparecem nos cadernos
+A tabela~\ref{tab:institutos} contém algumas siglas de salas de aula que aparecem nos cadernos
 de horários, disponibilizados pelas coordenadorias dos cursos e pela DAC.
 
-\begin{tabularx}{\linewidth}{|Y|Y|Y|}\hline
+\begin{center}
+\begin{table*}[ht!]
+{
+\begin{tabular}{|l|p{6cm}|p{8cm}|}\hline
 
-\multicolumn{}{|l|}{ \textbf{Siglas e locais das Salas de Aula no horário}}\tabularnewline \hline
+\multicolumn{3}{|c|}{ \textbf{Siglas e locais das Salas de Aula no horário}}\tabularnewline \hline
 
  \textbf{Sigla}  &  \textbf{Local}  &  \textbf{Referência}\tabularnewline \hline
 
@@ -2401,8 +2405,13 @@ de horários, disponibilizados pelas coordenadorias dos cursos e pela DAC.
 
  PB  &  Ciclo Básico II, Prédio Básico  &  Praça Central, em frente ao Bandejão.\tabularnewline \hline
 
-\end{tabularx}
-
+\end{tabular}
+}
+\hfill{}
+\caption{Siglas das salas de aula}
+\label{tab:institutos}
+\end{table*}
+\end{center}
 \section{Cancelamento, trancamento e desistência. Há alguma diferença?}
 Existe várias coisas diferentes que o aluno pode fazer com a sua matrícula.
 Aliás, o próprio processo de matrícula (em que o aluno pode escolher, e alterar
