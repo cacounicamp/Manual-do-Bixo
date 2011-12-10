@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt, twocolumn, twoside]{article}
+\documentclass[a4paper,10pt, twocolumn, twoside, titlepage]{article}
 \usepackage{fullpage}
 %\usepackage[scaled=0.85]{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -17,6 +17,7 @@
 }
 \usepackage{multicol}
 \usepackage{fancyhdr}
+\usepackage{wallpaper}
 
 %%%%% Headers and Footers
 \pagestyle{fancy}
@@ -32,8 +33,13 @@
 \renewcommand{\textheight}{642pt}
 \renewcommand{\voffset}{0pt}
 
+
 \begin{document}
 
+\thispagestyle{empty}
+\ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.png}
+
+\pagebreak{4}
 
 \onecolumn
 
