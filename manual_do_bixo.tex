@@ -36,10 +36,13 @@
 
 \begin{document}
 
+%%%% Capa
 \thispagestyle{empty}
 \ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.png}
 
 \pagebreak{4}
+
+%%%% Final da capa
 
 \onecolumn
 
@@ -60,6 +63,29 @@ não, passe na salinha do CACo/AAACEC para pegar).
 
 \paragraph{}
 Aproveite!
+
+\vfill % o vfill é pra jogar o texto na licença pro final da página
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.70,keepaspectratio=true]{img/cc_logo.png}
+\end{figure}
+
+\paragraph{}
+Este trabalho está licençiado sob a Licença Attribution-ShareAlike 2.5 Brazil
+da Creative Commons. Para ver uma cópia desta licença,
+visite \url{http://creativecommons.org/licenses/by-sa/2.5/br/} ou envie uma
+carta para Creative Commons, 444 Castro Street, Suite 900, Mountain View,
+California, 94041, USA.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.50,keepaspectratio=true]{img/by-sa.png}
+\end{figure}
+
+\begin{center}
+    Copyright \copyright  2011 Centro Acadêmico da Computação
+\end{center}
 
 \clearpage
 
@@ -123,5 +149,13 @@ Aproveite!
 %%%%% Eventos da Unicamp
 %%%%% Pra que que eu estou estudando isso??
 \input{outros.tex}
+
+%%%% Contra capa
+\pagebreak{4}
+
+\thispagestyle{empty}
+\ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.png}
+
+%%%% Final da contra capa
 
 \end{document}
