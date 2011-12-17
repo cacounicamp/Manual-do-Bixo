@@ -40,7 +40,10 @@
 \thispagestyle{empty}
 \ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.png}
 
-\pagebreak{4}
+%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS DOIS!
+\hfill
+\pagebreak[4]
+%%%%%%%%%%%%%%% FIM DA MÁGICA
 
 %%%% Final da capa
 
@@ -151,7 +154,12 @@ California, 94041, USA.
 \input{outros.tex}
 
 %%%% Contra capa
-\pagebreak{4}
+
+%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS COMANDOS!
+\onecolumn
+\pagebreak[4]
+\hfill
+%%%%%%%%%%%%%%% FIM DA MÁGICA
 
 \thispagestyle{empty}
 \ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.png}
