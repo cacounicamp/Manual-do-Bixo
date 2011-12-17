@@ -1,5 +1,6 @@
 all: manual_do_bixo.tex
-	-pdflatex --interaction nonstopmode $<
+	-pdflatex -file-line-error --interaction errorstopmode $<
+	-pdflatex -file-line-error --interaction errorstopmode $<
 a1: all
 	makeindex $<
 
