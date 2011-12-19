@@ -1,6 +1,6 @@
 == Tarefa ==
 - Corrigir a formatação dos parágrafos             [ ]
-- Colocar os telefones atualizados                 [ ]
+- Colocar os telefones atualizados                 [v]
 - CORRIGIR ERROS NO TEXTO                          [ ]
 - Remover trailing whitespace                      [v]
 - Deixar o texto mais apresentável                 [ ]
@@ -13,5 +13,11 @@
 - Atualizar valor das bolsas                       [v]
 - Colocar uma imagem do CACo na primeira página    [v]
 - Atualizar exemplo de intercâmbio (EC03 hoje)     [ ]
+<<<<<<< HEAD
 - Arrumar as listas com informações (i.e,          [ ]
     tirar hífens a mais)
+=======
+- Colocar contra-capa                              [v]
+- Colocar texto sobre o bandeco wap                [v]
+- Colocar licença                                  [v]
+>>>>>>> upstream/master

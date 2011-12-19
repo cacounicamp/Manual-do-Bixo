@@ -1,22 +1,18 @@
-\documentclass[a4paper,10pt, twocolumn, twoside]{article}
+\documentclass[a4paper,10pt, twocolumn, twoside, titlepage]{article}
 \usepackage{fullpage}
-%\usepackage[scaled=0.85]{helvet}
-\renewcommand{\familydefault}{\sfdefault}
 \usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[brazil]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
 \usepackage[pdftex]{graphicx}
 \usepackage{url,color,float}
 \usepackage{multirow}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=false,
-    pdfborder=0 0 0
-}
+\usepackage{indentfirst}
 \usepackage{multicol}
 \usepackage{fancyhdr}
+\usepackage{wallpaper}
 
 %%%%% Headers and Footers
 \pagestyle{fancy}
@@ -34,6 +30,16 @@
 
 \begin{document}
 
+%%%% Capa
+\thispagestyle{empty}
+\ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.png}
+
+%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS DOIS!
+\hfill
+\pagebreak[4]
+%%%%%%%%%%%%%%% FIM DA MÁGICA
+
+%%%% Final da capa
 
 \onecolumn
 
@@ -54,6 +60,29 @@ não, passe na salinha do CACo para pegar).
 
 \paragraph{}
 Aproveite!
+
+\vfill % o vfill é pra jogar o texto na licença pro final da página
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.70,keepaspectratio=true]{img/cc_logo.png}
+\end{figure}
+
+\paragraph{}
+Este trabalho está licençiado sob a Licença Attribution-ShareAlike 2.5 Brazil
+da Creative Commons. Para ver uma cópia desta licença,
+visite \url{http://creativecommons.org/licenses/by-sa/2.5/br/} ou envie uma
+carta para Creative Commons, 444 Castro Street, Suite 900, Mountain View,
+California, 94041, USA.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.50,keepaspectratio=true]{img/by-sa.png}
+\end{figure}
+
+\begin{center}
+    Copyright \copyright  2011 Centro Acadêmico da Computação
+\end{center}
 
 \clearpage
 
@@ -117,5 +146,18 @@ Aproveite!
 %%%%% Eventos da Unicamp
 %%%%% Pra que que eu estou estudando isso??
 \input{outros.tex}
+
+%%%% Contra capa
+
+%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS COMANDOS!
+\onecolumn
+\pagebreak[4]
+\hfill
+%%%%%%%%%%%%%%% FIM DA MÁGICA
+
+\thispagestyle{empty}
+\ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.png}
+
+%%%% Final da contra capa
 
 \end{document}
