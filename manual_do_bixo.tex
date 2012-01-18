@@ -13,6 +13,9 @@
 \usepackage{multicol}
 \usepackage{fancyhdr}
 \usepackage{wallpaper}
+\usepackage{dblfloatfix}
+\usepackage{fixltx2e}
+\usepackage{wrapfig}
 
 %%%%% Headers and Footers
 \pagestyle{fancy}
@@ -138,7 +141,7 @@ California, 94041, USA.
 \twocolumn
 %%%%% Serviços da Unicamp
 \input{servicos_unicamp.tex}
-\twocolumn
+\newpage
 %%%%% Agora eu tenho um e-mail da Unicamp
 \input{email_unicamp.tex}
 \twocolumn
