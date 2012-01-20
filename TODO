@@ -1,9 +1,21 @@
 == Tarefa ==
-- Corrigir a formatação dos parágrafos             [ ]
+
+2013:
+
+- Utilizar um build system mais portável (scons?)  [ ]
+- Colocar as imagens como fundo (watermark)        [ ]
+- Separar a geração da capa do latex               [ ]
+- Melhorar a documentação interna                  [ ]
+- Procurar automatizar mais coisas (datas, etc.)   [ ]
+- Spell-checking                                   [ ]
+
+2012:
+
+- Corrigir a formatação dos parágrafos             [v]
 - Colocar os telefones atualizados                 [v]
-- CORRIGIR ERROS NO TEXTO                          [ ]
+- CORRIGIR ERROS NO TEXTO                          [v]
 - Remover trailing whitespace                      [v]
-- Deixar o texto mais apresentável                 [ ]
+- Deixar o texto mais apresentável                 [v]
 - Pedir uma nova mensagem do diretor da FEEC (i.e, [v]
   substituir a do Max por uma do Antenor)
 - Indicar que o RA funciona na janta               [v]
