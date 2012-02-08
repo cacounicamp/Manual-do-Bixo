@@ -1,4 +1,4 @@
 import os
 
-env = Environment(PATH = os.environ['PATH'])
+env = Environment(ENV = os.environ)
 env.PDF("manual_do_bixo.tex")
