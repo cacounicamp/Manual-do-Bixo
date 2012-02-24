@@ -8,7 +8,10 @@ da Unicamp.
 Compilando
 ----------
 
-Basta rodar 'make' para compilar o manual, gerando um PDF.
+O build system utilizado é o scons.
+
+ - Para compilar o manual: `scons`
+ - Para limpar os arquivos temporários de compilação: `scons --clean`
 
 Como contribuir
 ---------------

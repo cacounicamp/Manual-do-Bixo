@@ -2,7 +2,7 @@
 
 2013:
 
-- Utilizar um build system mais portável (scons?)  [ ]
+- Utilizar um build system mais portável (scons?)  [v]
 - Colocar as imagens como fundo (watermark)        [ ]
 - Separar a geração da capa do latex               [ ]
 - Melhorar a documentação interna                  [ ]
