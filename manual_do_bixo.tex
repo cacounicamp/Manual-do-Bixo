@@ -1,12 +1,21 @@
 \documentclass[a4paper,10pt, twocolumn, twoside, titlepage]{article}
 \usepackage{fullpage}
-\usepackage{ucs}
-\usepackage[utf8x]{inputenc}
+\usepackage{ifxetex}
+
+\ifxetex
+    \usepackage{fontspec}
+    \setmainfont[Mapping=tex-text]{TeX Gyre Pagella} % Pallazo
+\else
+    \usepackage[utf8]{inputenc}
+    \usepackage{ucs}
+    \usepackage[T1]{fontenc}
+    \usepackage[sc]{mathpazo}
+    \usepackage[pdftex]{graphicx}
+\fi
+
 \usepackage[brazil]{babel}
-\usepackage[T1]{fontenc}
-\usepackage[sc]{mathpazo}
 \linespread{1.05}
-\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
 \usepackage{url,color,float}
 \usepackage{multirow}
 \usepackage{indentfirst}

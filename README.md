@@ -11,6 +11,7 @@ Compilando
 O build system utilizado é o scons.
 
  - Para compilar o manual: `scons`
+ - Para compilar com fallback para o latex original: `scons latex.pdf`
  - Para limpar os arquivos temporários de compilação: `scons --clean`
 
 Como contribuir
