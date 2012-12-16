@@ -29,6 +29,9 @@ mandar pull requests com alterações. Observe as seguintes convenções:
    seções no mesmo arquivo), e os inclua no arquivo principal com \input
  - Escreva mensagens de commit em português e que resumam o que cada alteração
    representa
+ - Evite nomes de arquivos cuja diferença seja apenas a capitalização. Ex:
+   `Padaria.png` e `padaria.png` são o mesmo arquivo em um sistema Windows, mas
+   não em um \*nix, e a idéia do manual é ser portável
 
 Como qualquer lista de regras, elas podem ser quebradas dado um bom argumento =)
 
