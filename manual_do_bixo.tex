@@ -27,6 +27,7 @@
 \usepackage{dblfloatfix}
 \usepackage{fixltx2e}
 \usepackage{wrapfig}
+\usepackage{enumitem}
 \usepackage{hyperref}
 \hypersetup{
     bookmarks=true,
@@ -49,14 +50,21 @@
 \renewcommand{\textheight}{642pt}
 \renewcommand{\voffset}{0pt}
 
-% comando para deixar emails na formatação e com link correto
+% Comando para deixar emails na formatação e com link correto
 \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+
+% Environment que cria listas com menor espaçamento vertical
+\newenvironment{compactitemize}{
+    \begin{itemize}[noitemsep,nolistsep]
+}{
+    \end{itemize}
+}
 
 \begin{document}
 
 %%%% Capa
 \thispagestyle{empty}
-\ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.png}
+\ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.pdf}
 
 %%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS DOIS!
 \hfill
@@ -143,19 +151,19 @@ California, 94041, USA.
 
 %%%%% Para pensar
 \input{introducao.tex}
-\twocolumn
+\newpage
 %%%%% Lugares para morar
 \input{moradia.tex}
-\twocolumn
+\newpage
 %%%%% Comida
 \input{alimentacao.tex}
-\twocolumn
+\newpage
 %%%%% Diversão
 \input{lazer.tex}
-\twocolumn
+\newpage
 %%%%% Transporte
 \input{transporte.tex}
-\twocolumn
+\newpage
 %%%%% Outras necessidades
 %%%%% SIGLAS malucas
 %%%%% Disciplinas
@@ -163,18 +171,18 @@ California, 94041, USA.
 %%%%% Lugares para estudar
 %%%%% Melhores banheiros
 \input{misc.tex}
-\twocolumn
+\newpage
 %%%%% Serviços da Unicamp
 \input{servicos_unicamp.tex}
 \newpage
 %%%%% Agora eu tenho um e-mail da Unicamp
 \input{email_unicamp.tex}
-\twocolumn
+\newpage
 %%%%% Iniciação Científica
 %%%%% Intercâmbio
 %%%%% Cuidado com CR e Reprovação
 \input{graduacao.tex}
-\twocolumn
+\newpage
 %%%%% Grupos e Entidades da Unicamp
 %%%%% Conpec
 %%%%% Atlética -- AAACEC
@@ -195,7 +203,7 @@ California, 94041, USA.
 %%%%%%%%%%%%%%% FIM DA MÁGICA
 
 \thispagestyle{empty}
-\ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.png}
+\ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.pdf}
 
 %%%% Final da contra capa
 
