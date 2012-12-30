@@ -32,6 +32,8 @@ mandar pull requests com alterações. Observe as seguintes convenções:
  - Evite nomes de arquivos cuja diferença seja apenas a capitalização. Ex:
    `Padaria.png` e `padaria.png` são o mesmo arquivo em um sistema Windows, mas
    não em um \*nix, e a idéia do manual é ser portável
+ - Use sempre `subsubsection*`, nesse caso os números apenas ocupam espaço
+   desnecessariamente
 
 Como qualquer lista de regras, elas podem ser quebradas dado um bom argumento =)
 
