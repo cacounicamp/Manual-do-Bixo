@@ -5,6 +5,7 @@
 \ifxetex
     \usepackage{fontspec}
     \setmainfont[Mapping=tex-text]{TeX Gyre Pagella} % Pallazo
+    \usepackage{graphicx}
 \else
     \usepackage[utf8]{inputenc}
     \usepackage{ucs}
@@ -13,9 +14,10 @@
     \usepackage[pdftex]{graphicx}
 \fi
 
+\DeclareGraphicsExtensions{.png,.jpg}
+
 \usepackage[brazil]{babel}
 \linespread{1.05}
-\usepackage{graphicx}
 \usepackage{url,color,float}
 \usepackage{multirow}
 \usepackage{indentfirst}
@@ -25,6 +27,14 @@
 \usepackage{dblfloatfix}
 \usepackage{fixltx2e}
 \usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+    bookmarks=true,
+    pdftitle={Manual do Bixo \the\year},
+    pdfauthor={Centro Acadêmico da Computação - CACo},
+    hidelinks
+}
 
 %%%%% Headers and Footers
 \pagestyle{fancy}
@@ -40,11 +50,21 @@
 \renewcommand{\textheight}{642pt}
 \renewcommand{\voffset}{0pt}
 
+% Comando para deixar emails na formatação e com link correto
+\newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+
+% Environment que cria listas com menor espaçamento vertical
+\newenvironment{compactitemize}{
+    \begin{itemize}[noitemsep,nolistsep]
+}{
+    \end{itemize}
+}
+
 \begin{document}
 
 %%%% Capa
 \thispagestyle{empty}
-\ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.png}
+\ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.pdf}
 
 %%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS DOIS!
 \hfill
@@ -54,10 +74,11 @@
 %%%% Final da capa
 
 \onecolumn
+\pagenumbering{roman}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
-    \includegraphics[scale=0.50,keepaspectratio=true]{img/caco-logo-grande.png}
+    \includegraphics[scale=0.50,keepaspectratio=true]{img/caco/logo.png}
 \end{figure}
 
 \paragraph{}
@@ -67,14 +88,13 @@ Bem-vindo!
 Este é o Manual do Bixo do CACo, o Centro Acadêmico da Computação.
 Ele foi elaborado por seus veteranos e inclui diversas dicas para auxiliar a sua
 sobrevivência neste primeiro ano na Unicamp.
-Você provavelmente recebeu a versão impressa nas primeiras semanas de aula (se
-não, passe na salinha do CACo para pegar).
+Você provavelmente recebeu a versão impressa nas primeiras semanas de aula (senão, passe na salinha do CACo para pegar).
 
 \paragraph{}
 Nós trabalhamos muito para que as informações presentes aqui sejam úteis,
 corretas e atuais, mas é possível que tenhamos deixado alguma coisa passar. Se
 você encontrar qualquer informação incorreta ou desatualizada, seja um bom bixo
-e nos avise em caco@ic.unicamp.br.
+e nos avise em \email{caco@ic.unicamp.br}.
 
 \paragraph{}
 Aproveite!
@@ -99,15 +119,14 @@ California, 94041, USA.
 \end{figure}
 
 \begin{center}
-    Copyright \copyright  2011 Centro Acadêmico da Computação
+    Copyright ~ \copyright ~ 2011-\the\year ~ Centro Acadêmico da Computação
 \end{center}
 
 \clearpage
 
-
-\pagenumbering{roman}
 \tableofcontents
 \newpage
+
 \pagenumbering{arabic}
 \onecolumn
 
@@ -132,37 +151,45 @@ California, 94041, USA.
 
 %%%%% Para pensar
 \input{introducao.tex}
-\twocolumn
+\newpage
 %%%%% Lugares para morar
 \input{moradia.tex}
-\twocolumn
+\newpage
 %%%%% Comida
 \input{alimentacao.tex}
-\twocolumn
+\newpage
 %%%%% Diversão
 \input{lazer.tex}
-\twocolumn
+\newpage
 %%%%% Transporte
 \input{transporte.tex}
-\twocolumn
+\newpage
 %%%%% Outras necessidades
+%%%%% SIGLAS malucas
+%%%%% Disciplinas
+%%%%% Avaliações de professores
+%%%%% Lugares para estudar
+%%%%% Melhores banheiros
 \input{misc.tex}
-\twocolumn
+\newpage
 %%%%% Serviços da Unicamp
 \input{servicos_unicamp.tex}
 \newpage
 %%%%% Agora eu tenho um e-mail da Unicamp
 \input{email_unicamp.tex}
-\twocolumn
-%%%%% Iniciação Científica
+\newpage
+%%%%% Iniciação Científica 
+%%%%% Acesso a artigos e revistas científicas
 %%%%% Intercâmbio
-%%%%% Eletivas e Proficiência
 %%%%% Cuidado com CR e Reprovação
 \input{graduacao.tex}
-\twocolumn
+\newpage
 %%%%% Grupos e Entidades da Unicamp
+%%%%% Conpec
+%%%%% Atlética -- AAACEC
+%%%%% Centro Acadêmico da Computação
 \input{grupos_entidades.tex}
-\twocolumn
+\newpage
 %%%%% Jornal da Unicamp
 %%%%% Eventos da Unicamp
 %%%%% Pra que que eu estou estudando isso??
@@ -177,7 +204,7 @@ California, 94041, USA.
 %%%%%%%%%%%%%%% FIM DA MÁGICA
 
 \thispagestyle{empty}
-\ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.png}
+\ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.pdf}
 
 %%%% Final da contra capa
 
