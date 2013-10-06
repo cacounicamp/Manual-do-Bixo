@@ -1,10 +1,37 @@
 == Tarefa ==
 
+2014:
+  Arte:
+- Capa                                             [ ]
+- Contra capa                                      [ ]
+- Criar um logo / nome estilizado do manual        [ ]
+- Decidir fonte                                    [ ]
+
+  Estrutra:
+- Estruturar capítulos                             [v]
+- Rearranjar seções                                [ ]
+- Reestruturar arquivos                            [v]
+- Verificar portabilidade do latexmk               [ ]
+
+  Outros:
+- Atualizar licensa                                [v]
+- TODOs do manual da gestão                        [ ]
+
+  Conteúdo:
+- Reescrever prefácio                              [ ]
+- Verificar telefones                              [ ]
+- Verificar links                                  [ ]
+- Atualizar mensagem do diretor do IC              [ ]
+- Atualizar seções das entidades                   [ ]
+- Atualizar informações sobre webmail2 (IC)        [ ]
+- Adicionar informações do wprint                  [ ]
+- Spell-checking                                   [ ]
+
 2013:
 
 - Utilizar um build system mais portável (scons?)  [v]
 - Colocar as imagens como fundo (watermark)        [ ]
-- Separar a geração da capa do latex               [ ]
+- Separar a geração da capa do latex               [v]
 - Melhorar a documentação interna                  [ ]
 - Procurar automatizar mais coisas (datas, etc.)   [v]
 - Spell-checking                                   [v]
