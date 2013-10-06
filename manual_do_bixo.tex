@@ -1,29 +1,40 @@
-\documentclass[a4paper,10pt, twocolumn, twoside, titlepage]{article}
+\documentclass[a4paper,10pt,twocolumn]{book}
 \usepackage{fullpage}
-\usepackage{ifxetex}
 
-\ifxetex
-    \usepackage{fontspec}
-    \setmainfont[Mapping=tex-text]{TeX Gyre Pagella} % Pallazo
-    \usepackage{graphicx}
-\else
-    \usepackage[utf8]{inputenc}
-    \usepackage{ucs}
-    \usepackage[T1]{fontenc}
-    \usepackage[sc]{mathpazo}
-    \usepackage[pdftex]{graphicx}
-\fi
+% Compatibilidade com arquivos utf8
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+%%%%% Fonte
+\usepackage[T1]{fontenc}
 
-\DeclareGraphicsExtensions{.png,.jpg}
+%% latin modern -- LaTeX's default
+%\usepackage{lmodern}
 
-\usepackage[brazil]{babel}
-\linespread{1.05}
+%% quattrocento
+%\usepackage{quattrocento}
+
+%%% TeX Gyre fonts
+%% serif: termes
+%\usepackage{tgtermes}
+%% serif: pagella -- last year's font
+\usepackage{tgpagella}
+%% sans: heros
+\usepackage{tgheros}
+%% mono: cursor
+\usepackage{tgcursor}
+
+%%%%%
+
+\usepackage[pdftex]{graphicx}
+\DeclareGraphicsExtensions{.pdf,.eps,.png,.jpg}
+
+\usepackage[brazilian]{babel}
+
 \usepackage{url,color,float}
 \usepackage{multirow}
 \usepackage{indentfirst}
 \usepackage{multicol}
 \usepackage{fancyhdr}
-\usepackage{wallpaper}
 \usepackage{dblfloatfix}
 \usepackage{fixltx2e}
 \usepackage{wrapfig}
@@ -36,11 +47,13 @@
     hidelinks
 }
 
+
 %%%%% Headers and Footers
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE, RO]{Manual do Bixo}
-\fancyhead[RE, LO]{\leftmark}
+\fancyhead[LE, RO]{Manual do Bixo \the\year}
+\fancyhead[RE]{\rightmark}
+\fancyhead[LO]{\leftmark}
 \fancyfoot[EL, OR]{\thepage}
 \fancyfoot[RE, LO]{CACo - Centro Acadêmico da Computação}
 \renewcommand{\headrulewidth}{0.2pt}
@@ -49,6 +62,9 @@
 \renewcommand{\footskip}{30pt}
 \renewcommand{\textheight}{642pt}
 \renewcommand{\voffset}{0pt}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
 
 % Comando para deixar emails na formatação e com link correto
 \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
@@ -62,48 +78,32 @@
 
 \begin{document}
 
-%%%% Capa
-\thispagestyle{empty}
-\ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.pdf}
+%%%%%% Capa
+%%\thispagestyle{empty}
+%%\ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.pdf}
 
-%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS DOIS!
-\hfill
-\pagebreak[4]
-%%%%%%%%%%%%%%% FIM DA MÁGICA
+%%%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS DOIS!
+%%\hfill
+%%\pagebreak[4]
+%%%%%%%%%%%%%%%%% FIM DA MÁGICA
+%%
+%%%%%%%% Final da capa
 
-%%%% Final da capa
-
+\frontmatter
 \onecolumn
-\pagenumbering{roman}
-
 \begin{figure}[H]
+    \vskip 50pt % vskip serve para deixar um espaço entre o topo da página
     \centering
-    \includegraphics[scale=0.50,keepaspectratio=true]{img/caco/logo.png}
+    %%%%% Trocar por uma imagem 'do manual'
+    \includegraphics[width=.65\textwidth]{img/caco/logo.png}
+    \caption{trocar pelo (futuro) logo do manual!!!}
 \end{figure}
-
-\paragraph{}
-Bem-vindo!
-
-\paragraph{}
-Este é o Manual do Bixo do CACo, o Centro Acadêmico da Computação.
-Ele foi elaborado por seus veteranos e inclui diversas dicas para auxiliar a sua
-sobrevivência neste primeiro ano na Unicamp.
-Você provavelmente recebeu a versão impressa nas primeiras semanas de aula (senão, passe na salinha do CACo para pegar).
-
-\paragraph{}
-Nós trabalhamos muito para que as informações presentes aqui sejam úteis,
-corretas e atuais, mas é possível que tenhamos deixado alguma coisa passar. Se
-você encontrar qualquer informação incorreta ou desatualizada, seja um bom bixo
-e nos avise em \email{caco@ic.unicamp.br}.
-
-\paragraph{}
-Aproveite!
 
 \vfill % o vfill é pra jogar o texto na licença pro final da página
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.70,keepaspectratio=true]{img/cc_logo.png}
+    \includegraphics[width=.5\textwidth]{img/cc_logo.png}
 \end{figure}
 
 \paragraph{}
@@ -115,7 +115,7 @@ California, 94041, USA.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.50,keepaspectratio=true]{img/by-sa.png}
+    \includegraphics[scale=.8]{img/by-sa.png}
 \end{figure}
 
 \begin{center}
@@ -124,11 +124,39 @@ California, 94041, USA.
 
 \clearpage
 
-\tableofcontents
-\newpage
+\section*{Prefácio}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.65\textwidth]{img/caco/logo.pdf}
+\end{figure}
+\paragraph{}
+Bem-vindo!
 
-\pagenumbering{arabic}
+\paragraph{}
+Este é o Manual do Bixo do CACo, o Centro Acadêmico da Computação.  Ele foi
+elaborado por seus veteranos e inclui diversas dicas para auxiliar a sua
+sobrevivência neste primeiro ano na Unicamp.  Você provavelmente recebeu a
+versão impressa nas primeiras semanas de aula (senão, passe na salinha do CACo
+para pegar).
+
+\paragraph{}
+Nós trabalhamos muito para que as informações presentes aqui sejam úteis,
+corretas e atuais, mas é possível que tenhamos deixado alguma coisa passar. Se
+você encontrar qualquer informação incorreta ou desatualizada, seja um bom bixo
+e nos avise em \email{caco@ic.unicamp.br}.
+
+\paragraph{}
+Aproveite!
+
+
+\tableofcontents
+%\newpage
+
+\mainmatter
+%\pagenumbering{arabic}
 \onecolumn
+
+\chapter{Olá Mundo!}
 
 %%%%% Bem-vindo
 \input{bem_vindo.tex}
@@ -152,6 +180,8 @@ California, 94041, USA.
 %%%%% Para pensar
 \input{introducao.tex}
 \newpage
+
+\chapter{Sobrevivendo em Barão}
 %%%%% Lugares para morar
 \input{moradia.tex}
 \newpage
@@ -164,7 +194,9 @@ California, 94041, USA.
 %%%%% Transporte
 \input{transporte.tex}
 \newpage
+
 %%%%% Outras necessidades
+\chapter{A vida na Unicamp}
 %%%%% SIGLAS malucas
 %%%%% Disciplinas
 %%%%% Avaliações de professores
@@ -178,6 +210,7 @@ California, 94041, USA.
 %%%%% Agora eu tenho um e-mail da Unicamp
 \input{email_unicamp.tex}
 \newpage
+\chapter{Além da graduação}
 %%%%% Iniciação Científica 
 %%%%% Acesso a artigos e revistas científicas
 %%%%% Intercâmbio
@@ -197,15 +230,15 @@ California, 94041, USA.
 
 %%%% Contra capa
 
-%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS COMANDOS!
-\onecolumn
-\pagebreak[4]
-\hfill
-%%%%%%%%%%%%%%% FIM DA MÁGICA
+%%%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS COMANDOS!
+%%\onecolumn
+%%\pagebreak[4]
+%%\hfill
+%%%%%%%%%%%%%%%%% FIM DA MÁGICA
 
-\thispagestyle{empty}
-\ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.pdf}
+%%\thispagestyle{empty}
+%%\ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.pdf}
 
-%%%% Final da contra capa
+%%%%%% Final da contra capa
 
 \end{document}
