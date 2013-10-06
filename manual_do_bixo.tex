@@ -1,9 +1,10 @@
-\documentclass[a4paper,10pt,twocolumn]{book}
+\documentclass[a4paper,10pt]{book}
 \usepackage{fullpage}
 
 % Compatibilidade com arquivos utf8
 \usepackage[utf8]{inputenc}
 \usepackage{ucs}
+
 %%%%% Fonte
 \usepackage[T1]{fontenc}
 
@@ -15,9 +16,9 @@
 
 %%% TeX Gyre fonts
 %% serif: termes
-%\usepackage{tgtermes}
+\usepackage{tgtermes}
 %% serif: pagella -- last year's font
-\usepackage{tgpagella}
+%\usepackage{tgpagella}
 %% sans: heros
 \usepackage{tgheros}
 %% mono: cursor
@@ -29,7 +30,6 @@
 \DeclareGraphicsExtensions{.pdf,.eps,.png,.jpg}
 
 \usepackage[brazilian]{babel}
-
 \usepackage{url,color,float}
 \usepackage{multirow}
 \usepackage{indentfirst}
@@ -55,7 +55,8 @@
 \fancyhead[RE]{\rightmark}
 \fancyhead[LO]{\leftmark}
 \fancyfoot[EL, OR]{\thepage}
-\fancyfoot[RE, LO]{CACo - Centro Acadêmico da Computação}
+\fancyfoot[RE]{Centro Acadêmico da Computação}
+\fancyfoot[LO]{CACo}
 \renewcommand{\headrulewidth}{0.2pt}
 \renewcommand{\footrulewidth}{0.2pt}
 \renewcommand{\headsep}{15pt}
@@ -78,19 +79,7 @@
 
 \begin{document}
 
-%%%%%% Capa
-%%\thispagestyle{empty}
-%%\ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.pdf}
-
-%%%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS DOIS!
-%%\hfill
-%%\pagebreak[4]
-%%%%%%%%%%%%%%%%% FIM DA MÁGICA
-%%
-%%%%%%%% Final da capa
-
 \frontmatter
-\onecolumn
 \begin{figure}[H]
     \vskip 50pt % vskip serve para deixar um espaço entre o topo da página
     \centering
@@ -146,97 +135,95 @@ e nos avise em \email{caco@ic.unicamp.br}.
 \paragraph{}
 Aproveite!
 
-
 \tableofcontents
-%\newpage
 
+% aqui começa o manual
 \mainmatter
-%\pagenumbering{arabic}
-\onecolumn
-
 \chapter{Olá Mundo!}
 
 %%%%% Bem-vindo
-\input{bem_vindo.tex}
-
+\input{ola_mundo/bem_vindo.tex}
 \clearpage
 
-\onecolumn
-
 %%%%% Mensagem do diretor da FEEC
-\input{mensagem_feec.tex}
-
+\input{ola_mundo/mensagem_feec.tex}
 \clearpage
 
 %%%%% Mensagem do diretor do IC
-\input{mensagem_ic.tex}
-
+\input{ola_mundo/mensagem_ic.tex}
 \clearpage
 
 \twocolumn
-
 %%%%% Para pensar
-\input{introducao.tex}
-\newpage
+\input{ola_mundo/pra_pensar.tex}
 
 \chapter{Sobrevivendo em Barão}
 %%%%% Lugares para morar
-\input{moradia.tex}
+\input{barao/lugares_para_morar.tex}
 \newpage
 %%%%% Comida
-\input{alimentacao.tex}
+\input{barao/comida.tex}
 \newpage
 %%%%% Diversão
-\input{lazer.tex}
+\input{barao/diversao.tex}
 \newpage
 %%%%% Transporte
-\input{transporte.tex}
+\input{barao/transporte.tex}
 \newpage
-
 %%%%% Outras necessidades
-\chapter{A vida na Unicamp}
+\input{barao/outras_necessidades.tex}
+
+\chapter{Estudando na Unicamp}
 %%%%% SIGLAS malucas
+\input{unicamp/siglas.tex}
+\newpage
 %%%%% Disciplinas
-%%%%% Avaliações de professores
+\input{unicamp/disciplinas.tex}
+\newpage
 %%%%% Lugares para estudar
+\input{unicamp/lugares_para_estudar.tex}
+\newpage
 %%%%% Melhores banheiros
-\input{misc.tex}
+\input{unicamp/melhores_banheiros.tex}
+\newpage
+%%%%% Iniciação Científica
+\input{unicamp/iniciacao.tex}
+\newpage
+%%%%% Acesso a artigos e revistas científicas
+\input{unicamp/artigos.tex}
+\newpage
+%%%%% Intercâmbio
+\input{unicamp/intercambio.tex}
+\newpage
+%%%%% Cuidado com CR e Reprovação
+\input{unicamp/cr_reprovacao.tex}
+\newpage
+%%%%% Pra que que eu estou estudando isso??
+\input{unicamp/pra_que_estou_estudando_isso.tex}
+
+\chapter{Além da graduação}
+%%%%% Grupos e Entidades da Unicamp
+\input{alem_da_graduacao/grupos_entidades.tex}
+\newpage
+%%%%% Conpec
+\input{alem_da_graduacao/conpec.tex}
+\newpage
+%%%%% Atlética -- AAACEC
+\input{alem_da_graduacao/aaacec.tex}
+\newpage
+%%%%% Centro Acadêmico da Computação
+\input{alem_da_graduacao/caco.tex}
 \newpage
 %%%%% Serviços da Unicamp
-\input{servicos_unicamp.tex}
-\newpage
-%%%%% Agora eu tenho um e-mail da Unicamp
-\input{email_unicamp.tex}
-\newpage
-\chapter{Além da graduação}
-%%%%% Iniciação Científica 
-%%%%% Acesso a artigos e revistas científicas
-%%%%% Intercâmbio
-%%%%% Cuidado com CR e Reprovação
-\input{graduacao.tex}
-\newpage
-%%%%% Grupos e Entidades da Unicamp
-%%%%% Conpec
-%%%%% Atlética -- AAACEC
-%%%%% Centro Acadêmico da Computação
-\input{grupos_entidades.tex}
+\input{alem_da_graduacao/servicos.tex}
 \newpage
 %%%%% Jornal da Unicamp
+\input{alem_da_graduacao/jornal.tex}
+\newpage
 %%%%% Eventos da Unicamp
-%%%%% Pra que que eu estou estudando isso??
-\input{outros.tex}
-
-%%%% Contra capa
-
-%%%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS COMANDOS!
-%%\onecolumn
-%%\pagebreak[4]
-%%\hfill
-%%%%%%%%%%%%%%%%% FIM DA MÁGICA
-
-%%\thispagestyle{empty}
-%%\ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.pdf}
-
-%%%%%% Final da contra capa
+\input{alem_da_graduacao/eventos.tex}
+\newpage
+%%%%% Agora eu tenho um e-mail da Unicamp
+\input{alem_da_graduacao/email.tex}
 
 \end{document}
