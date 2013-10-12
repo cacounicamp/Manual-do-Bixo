@@ -1,32 +1,19 @@
 \documentclass[a4paper,10pt]{book}
 \usepackage{fullpage}
+\usepackage{ifxetex}
 
-% Compatibilidade com arquivos utf8
-\usepackage[utf8]{inputenc}
-\usepackage{ucs}
+\ifxetex
+    \usepackage{fontspec}
+    \setmainfont[Mapping=tex-text]{TeX Gyre Pagella} % Pallazo
+    \usepackage{graphicx}
+\else
+    \usepackage[utf8]{inputenc}
+    \usepackage{ucs}
+    \usepackage[T1]{fontenc}
+    \usepackage{tgpagella}
+    \usepackage[pdf]{graphicx}
+\fi
 
-%%%%% Fonte
-\usepackage[T1]{fontenc}
-
-%% latin modern -- LaTeX's default
-\usepackage{lmodern}
-
-%% quattrocento
-%\usepackage{quattrocento}
-
-%%% TeX Gyre fonts
-%% serif: termes
-%\usepackage{tgtermes}
-%% serif: pagella -- last year's font
-%\usepackage{tgpagella}
-%% sans: heros
-%\usepackage{tgheros}
-%% mono: cursor
-%\usepackage{tgcursor}
-
-%%%%%
-
-\usepackage[pdftex]{graphicx}
 \DeclareGraphicsExtensions{.pdf,.eps,.png,.jpg}
 
 \usepackage[brazilian]{babel}
