@@ -14,6 +14,12 @@ O build system utilizado é o scons.
  - Para compilar com fallback para o latex original: `scons latex.pdf`
  - Para limpar os arquivos temporários de compilação: `scons --clean`
 
+Dependências:
+
+ - Distribuição de LaTeX com suporte a XeTeX (utilize preferencialmente o
+   tex-live)
+ - Fonte atual: TeX Gyre Pagella
+
 Como contribuir
 ---------------
 
