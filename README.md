@@ -68,7 +68,7 @@ Tarefas
 - [ ] Automatizar geração do manual com capa (?)
 
       Outros:
-- [x] Atualizar licensa
+- [x] Atualizar licença
 - [x] Conferir os TODOs do manual da gestão
 
       Conteúdo:
