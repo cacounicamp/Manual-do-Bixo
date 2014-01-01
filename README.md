@@ -76,7 +76,7 @@ Tarefas
 - [ ] Revisar telefones
 - [ ] Revisar links
 - [ ] Revisar preços (moradia, comida, transporte)
-- [ ] Atualizar seção de periódicos (e-mail do Thiago na CACo-op)
+- [x] Atualizar seção de periódicos (e-mail do Thiago na CACo-op)
 - [ ] Atualizar mensagem do diretor do IC
 - [ ] Atualizar seções das entidades
 - [ ] Adicionar entidades diferentes, i.e. LGBT
