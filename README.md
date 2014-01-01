@@ -73,7 +73,7 @@ Tarefas
 
       Conteúdo:
 - [ ] Reescrever prefácio
-- [ ] Revisar telefones
+- [x] Revisar telefones
 - [ ] Revisar links
 - [ ] Revisar preços (moradia, comida, transporte)
 - [x] Atualizar seção de periódicos (e-mail do Thiago na CACo-op)
@@ -92,7 +92,7 @@ Tarefas
 - [ ] Adicionar texto sobre história da computação
 - [ ] Pedir ao Cid um texto sobre como aproveitar
       melhor a Unicamp
-- [ ] Retirar cantinas do IMECC, da Artes e outras que fecharam
+- [x] Retirar cantinas do IMECC, da Artes e outras que fecharam
 - [ ] Empresas de Barão Geraldo
 - [ ] Atualizar horário do RA
 
