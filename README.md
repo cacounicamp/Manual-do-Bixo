@@ -55,7 +55,7 @@ Tarefas
 
 2014:
   Arte:
-- [ ] Capa
+- [x] Capa
 - [ ] Contra capa
 - [ ] Criar um logo / nome estilizado do manual
 - [ ] Decidir fonte
