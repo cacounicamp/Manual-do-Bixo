@@ -56,15 +56,14 @@ Tarefas
 2014:
   Arte:
 - [x] Capa
-- [ ] Contra capa
-- [ ] Criar um logo / nome estilizado do manual
-- [ ] Decidir fonte
+- [x] Contra capa
+- [x] Criar um logo / nome estilizado do manual
+- [x] Decidir fonte
 
       Estrutra:
 - [x] Estruturar capítulos
 - [ ] Rearranjar seções
 - [x] Reestruturar arquivos
-- [ ] Verificar portabilidade do latexmk
 - [ ] Automatizar geração do manual com capa (?)
 
       Outros:
@@ -72,7 +71,7 @@ Tarefas
 - [x] Conferir os TODOs do manual da gestão
 
       Conteúdo:
-- [ ] Reescrever prefácio
+- [ ] Revisar prefácio
 - [x] Revisar telefones
 - [ ] Revisar links
 - [ ] Revisar preços (moradia, comida, transporte)
