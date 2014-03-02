@@ -14,6 +14,12 @@ O build system utilizado é o scons.
  - Para compilar com fallback para o latex original: `scons latex.pdf`
  - Para limpar os arquivos temporários de compilação: `scons --clean`
 
+Dependências:
+
+ - Distribuição de LaTeX com suporte a XeTeX (utilize preferencialmente o
+   tex-live)
+ - Fonte atual: TeX Gyre Pagella
+
 Como contribuir
 ---------------
 
@@ -43,3 +49,52 @@ Manutenção de versões
 A cada nova versão completada, criar uma tag no último commit estável seguindo
 o padrão "vANO" ANO onde é o ano em que o manual vai ser entregue, com
 4 dígitos. E adicionar um pdf pronto na seção de downloads do github.
+
+Tarefas
+-------
+
+2014:
+  Arte:
+- [x] Capa
+- [x] Contra capa
+- [x] Criar um logo / nome estilizado do manual
+- [x] Decidir fonte
+
+      Estrutra:
+- [x] Estruturar capítulos
+- [ ] Rearranjar seções
+- [x] Reestruturar arquivos
+- [ ] Automatizar geração do manual com capa (?)
+
+      Outros:
+- [x] Atualizar licença
+- [x] Conferir os TODOs do manual da gestão
+
+      Conteúdo:
+- [ ] Revisar prefácio
+- [x] Revisar telefones
+- [ ] Revisar links
+- [ ] Revisar preços (moradia, comida, transporte)
+- [x] Atualizar seção de periódicos (e-mail do Thiago na CACo-op)
+- [ ] Atualizar mensagem do diretor do IC
+- [ ] Atualizar seções das entidades
+- [ ] Adicionar entidades diferentes, i.e. LGBT
+- [ ] Atualizar informações sobre webmail2 (IC)
+- [ ] Adicionar informações do wprint
+- [ ] Adicionar mapa com itinerário dos circulares
+- [ ] Adicionar informações do circular externo
+- [ ] Adicionar link da wiki do suporte do IC
+- [ ] Adicionar informações sobre mudança de catálogo
+- [ ] Spell-checking
+
+      Coisas antigas que estavam no manual da gestão:
+- [ ] Adicionar texto sobre história da computação
+- [ ] Pedir ao Cid um texto sobre como aproveitar
+      melhor a Unicamp
+- [x] Retirar cantinas do IMECC, da Artes e outras que fecharam
+- [ ] Empresas de Barão Geraldo
+- [ ] Atualizar horário do RA
+
+2013:
+
+- [ ] Melhorar a documentação interna

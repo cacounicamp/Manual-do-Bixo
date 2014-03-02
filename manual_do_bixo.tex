@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt, twocolumn, twoside, titlepage]{article}
+\documentclass[a4paper,10pt,openany]{book}
 \usepackage{fullpage}
 \usepackage{ifxetex}
 
@@ -10,25 +10,29 @@
     \usepackage[utf8]{inputenc}
     \usepackage{ucs}
     \usepackage[T1]{fontenc}
-    \usepackage[sc]{mathpazo}
-    \usepackage[pdftex]{graphicx}
+    \usepackage{tgpagella}
+    \usepackage{graphicx}
 \fi
 
-\DeclareGraphicsExtensions{.png,.jpg}
+\DeclareGraphicsExtensions{.pdf,.eps,.png,.jpg}
 
-\usepackage[brazil]{babel}
-\linespread{1.05}
-\usepackage{url,color,float}
+% formatação do título dos capítulos
+\usepackage{titlesec}
+\titleformat{\chapter}[hang]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter:}{10pt}{}
+
+\usepackage[brazilian]{babel}
+\usepackage[hyphens]{url}
+\usepackage{color,float}
 \usepackage{multirow}
 \usepackage{indentfirst}
 \usepackage{multicol}
 \usepackage{fancyhdr}
-\usepackage{wallpaper}
 \usepackage{dblfloatfix}
 \usepackage{fixltx2e}
 \usepackage{wrapfig}
 \usepackage{enumitem}
-\usepackage{hyperref}
+\usepackage[breaklinks]{hyperref}
 \hypersetup{
     bookmarks=true,
     pdftitle={Manual do Bixo \the\year},
@@ -36,19 +40,25 @@
     hidelinks
 }
 
+
 %%%%% Headers and Footers
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[LE, RO]{Manual do Bixo}
-\fancyhead[RE, LO]{\leftmark}
+\fancyhead[LE, RO]{Manual do Bixo \the\year}
+\fancyhead[RE]{\rightmark}
+\fancyhead[LO]{\leftmark}
 \fancyfoot[EL, OR]{\thepage}
-\fancyfoot[RE, LO]{CACo - Centro Acadêmico da Computação}
+\fancyfoot[RE]{Centro Acadêmico da Computação}
+\fancyfoot[LO]{CACo}
 \renewcommand{\headrulewidth}{0.2pt}
 \renewcommand{\footrulewidth}{0.2pt}
 \renewcommand{\headsep}{15pt}
 \renewcommand{\footskip}{30pt}
 \renewcommand{\textheight}{642pt}
 \renewcommand{\voffset}{0pt}
+
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
 
 % Comando para deixar emails na formatação e com link correto
 \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
@@ -59,36 +69,58 @@
 }{
     \end{itemize}
 }
+\newenvironment{compactenumerate}{
+    \begin{enumerate}[noitemsep,nolistsep]
+}{
+    \end{enumerate}
+}
 
 \begin{document}
 
-%%%% Capa
-\thispagestyle{empty}
-\ThisTileWallPaper{\paperwidth}{\paperheight}{img/capa.pdf}
+\frontmatter
+\begin{figure}[H]
+    \vskip 50pt % vskip serve para deixar um espaço entre o topo da página
+    \centering
+    \includegraphics[width=.85\textwidth]{img/manual_logo.png}
+\end{figure}
 
-%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS DOIS!
-\hfill
-\pagebreak[4]
-%%%%%%%%%%%%%%% FIM DA MÁGICA
-
-%%%% Final da capa
-
-\onecolumn
-\pagenumbering{roman}
+\vfill % o vfill é pra jogar o texto na licença pro final da página
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.50,keepaspectratio=true]{img/caco/logo.png}
+    \includegraphics[width=.5\textwidth]{img/cc_logo.pdf}
 \end{figure}
 
+\paragraph{}
+Este trabalho está licenciado sob a Licença Attribution-ShareAlike 3.0 Brasil da
+Creative Commons. Para ver uma cópia desta licença, visite
+\url{creativecommons.org/licenses/by-sa/3.0/br}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.25\textwidth]{img/by-sa.pdf}
+\end{figure}
+
+\begin{center}
+    Copyright ~ \copyright ~ 2011-\the\year ~ Centro Acadêmico da Computação
+\end{center}
+
+\clearpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.65\textwidth]{img/caco_logo.pdf}
+\end{figure}
+\section*{Prefácio}
 \paragraph{}
 Bem-vindo!
 
 \paragraph{}
-Este é o Manual do Bixo do CACo, o Centro Acadêmico da Computação.
-Ele foi elaborado por seus veteranos e inclui diversas dicas para auxiliar a sua
-sobrevivência neste primeiro ano na Unicamp.
-Você provavelmente recebeu a versão impressa nas primeiras semanas de aula (senão, passe na salinha do CACo para pegar).
+Este é o Manual do Bixo do CACo, o Centro Acadêmico da Computação. Ele foi
+elaborado por seus veteranos (alunos e ex-alunos) e inclui diversas dicas para
+auxiliar a sua sobrevivência neste primeiro ano na Unicamp. Você provavelmente
+recebeu a versão impressa nas primeiras semanas de aula (senão, passe na salinha
+do CACo para pegar uma).
 
 \paragraph{}
 Nós trabalhamos muito para que as informações presentes aqui sejam úteis,
@@ -99,113 +131,95 @@ e nos avise em \email{caco@ic.unicamp.br}.
 \paragraph{}
 Aproveite!
 
-\vfill % o vfill é pra jogar o texto na licença pro final da página
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.70,keepaspectratio=true]{img/cc_logo.png}
-\end{figure}
-
-\paragraph{}
-Este trabalho está licenciado sob a Licença Attribution-ShareAlike 2.5 Brazil
-da Creative Commons. Para ver uma cópia desta licença,
-visite \url{creativecommons.org/licenses/by-sa/2.5/br} ou envie uma
-carta para Creative Commons, 444 Castro Street, Suite 900, Mountain View,
-California, 94041, USA.
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.50,keepaspectratio=true]{img/by-sa.png}
-\end{figure}
-
-\begin{center}
-    Copyright ~ \copyright ~ 2011-\the\year ~ Centro Acadêmico da Computação
-\end{center}
-
-\clearpage
-
 \tableofcontents
-\newpage
 
-\pagenumbering{arabic}
-\onecolumn
+% aqui começa o manual
+\mainmatter
+\chapter{Olá Mundo!}
 
 %%%%% Bem-vindo
-\input{bem_vindo.tex}
-
+\input{ola_mundo/bem_vindo.tex}
 \clearpage
 
-\onecolumn
-
 %%%%% Mensagem do diretor da FEEC
-\input{mensagem_feec.tex}
-
+\input{ola_mundo/mensagem_feec.tex}
 \clearpage
 
 %%%%% Mensagem do diretor do IC
-\input{mensagem_ic.tex}
-
+\input{ola_mundo/mensagem_ic.tex}
 \clearpage
 
 \twocolumn
-
 %%%%% Para pensar
-\input{introducao.tex}
-\newpage
+\input{ola_mundo/pra_pensar.tex}
+
+\chapter{Sobrevivendo em Barão}
 %%%%% Lugares para morar
-\input{moradia.tex}
+\input{barao/lugares_para_morar.tex}
 \newpage
 %%%%% Comida
-\input{alimentacao.tex}
+\input{barao/comida.tex}
 \newpage
 %%%%% Diversão
-\input{lazer.tex}
+\input{barao/diversao.tex}
 \newpage
 %%%%% Transporte
-\input{transporte.tex}
+\input{barao/transporte.tex}
 \newpage
 %%%%% Outras necessidades
-%%%%% SIGLAS malucas
+\input{barao/outras_necessidades.tex}
+
+\chapter{Estudando na Unicamp}
 %%%%% Disciplinas
-%%%%% Avaliações de professores
+\input{unicamp/disciplinas.tex}
+\newpage
+%%%%% SIGLAS malucas
+\input{unicamp/siglas.tex}
+\newpage
 %%%%% Lugares para estudar
+\input{unicamp/lugares_para_estudar.tex}
+\newpage
+%%%%% Cuidado com CR e Reprovação
+\input{unicamp/cr_reprovacao.tex}
+\newpage
+%%%%% Pra que que eu estou estudando isso??
+\input{unicamp/pra_que_estou_estudando_isso.tex}
+\newpage
+%%%%% Iniciação Científica
+\input{unicamp/iniciacao.tex}
+\newpage
+%%%%% Intercâmbio
+\input{unicamp/intercambio.tex}
+\newpage
+%%%%% Acesso a artigos e revistas científicas
+\input{unicamp/artigos.tex}
+\newpage
 %%%%% Melhores banheiros
-\input{misc.tex}
+\input{unicamp/melhores_banheiros.tex}
+
+\chapter{Além da graduação}
+%%%%% Grupos e Entidades da Unicamp
+\input{alem_da_graduacao/grupos_entidades.tex}
+\newpage
+%%%%% Conpec
+\input{alem_da_graduacao/conpec.tex}
+\newpage
+%%%%% Atlética -- AAACEC
+\input{alem_da_graduacao/aaacec.tex}
+\newpage
+%%%%% Centro Acadêmico da Computação
+\input{alem_da_graduacao/caco.tex}
+\newpage
+%%%%% Eventos da Unicamp
+\input{alem_da_graduacao/eventos.tex}
 \newpage
 %%%%% Serviços da Unicamp
-\input{servicos_unicamp.tex}
-\newpage
-%%%%% Agora eu tenho um e-mail da Unicamp
-\input{email_unicamp.tex}
-\newpage
-%%%%% Iniciação Científica 
-%%%%% Acesso a artigos e revistas científicas
-%%%%% Intercâmbio
-%%%%% Cuidado com CR e Reprovação
-\input{graduacao.tex}
-\newpage
-%%%%% Grupos e Entidades da Unicamp
-%%%%% Conpec
-%%%%% Atlética -- AAACEC
-%%%%% Centro Acadêmico da Computação
-\input{grupos_entidades.tex}
+\input{alem_da_graduacao/servicos.tex}
 \newpage
 %%%%% Jornal da Unicamp
-%%%%% Eventos da Unicamp
-%%%%% Pra que que eu estou estudando isso??
-\input{outros.tex}
-
-%%%% Contra capa
-
-%%%%%%%%%%%%%%% ESSA É A MÁGICA PRA QUEBRAR A PÁGINA, NÃO SEPARE OS COMANDOS!
-\onecolumn
-\pagebreak[4]
-\hfill
-%%%%%%%%%%%%%%% FIM DA MÁGICA
-
-\thispagestyle{empty}
-\ThisTileWallPaper{\paperwidth}{\paperheight}{img/contracapa.pdf}
-
-%%%% Final da contra capa
+\input{alem_da_graduacao/jornal.tex}
+\newpage
+%%%%% Agora eu tenho um e-mail da Unicamp
+\input{alem_da_graduacao/email.tex}
 
 \end{document}
