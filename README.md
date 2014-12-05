@@ -80,7 +80,7 @@ Antigos (Checar se foram implementados):
   - [ ] Adicionar informações do wprint
   - [ ] Adicionar mapa com itinerário dos circulares
   - [ ] Adicionar informações do circular externo
-  - [ ] Adicionar link da wiki do suporte do IC
+  - [x] Adicionar link da wiki do suporte do IC
   - [ ] Adicionar informações sobre como a mudança de catálogo funciona
 
 + 2013
