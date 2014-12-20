@@ -63,11 +63,11 @@ Tarefas
   - [ ] Automatizar geração do manual com capa (?)
 
 + Conteúdo:
-  - [ ] Atualizar valor médio de aluguel (fazer pesquisa entre alunos)
+  - [x] Atualizar valor médio de aluguel (fazer pesquisa entre alunos)
   - [ ] Revisar preços (moradia, comida, transporte)
   - [ ] Atualizar mensagem do diretor do IC
-  - [ ] Atualizar seções das entidades
-  - [ ] Adicionar mais entidades
+  - [x] Atualizar seções das entidades
+  - [x] Adicionar mais entidades
   - [ ] Revisar telefones
   - [ ] Revisar links
   - [ ] Spell-checking
