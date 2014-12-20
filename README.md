@@ -75,11 +75,11 @@ Tarefas
 Antigos (Checar se foram implementados):
 
 + 2014
-  - [ ] Revisar prefácio
-  - [ ] Atualizar informações sobre webmail2 (IC)
+  - [x] Revisar prefácio
+  - [x] Atualizar informações sobre webmail2 (IC)
   - [ ] Adicionar informações do wprint
   - [ ] Adicionar mapa com itinerário dos circulares
-  - [ ] Adicionar informações do circular externo
+  - [x] Adicionar informações do circular externo
   - [x] Adicionar link da wiki do suporte do IC
   - [ ] Adicionar informações sobre como a mudança de catálogo funciona
 
