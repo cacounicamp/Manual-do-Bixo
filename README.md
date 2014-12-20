@@ -64,7 +64,7 @@ Tarefas
 
 + Conteúdo:
   - [x] Atualizar valor médio de aluguel (fazer pesquisa entre alunos)
-  - [ ] Revisar preços (moradia, comida, transporte)
+  - [x] Revisar preços (moradia, comida, transporte)
   - [ ] Atualizar mensagem do diretor do IC
   - [x] Atualizar seções das entidades
   - [x] Adicionar mais entidades
