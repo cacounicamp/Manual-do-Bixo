@@ -41,3 +41,7 @@ Thumbs.db
 
 # Subprodutos do SCons
 .sconsign.dblite
+
+# Arquivos de backup do Emacs
+\#*\#
+.\#*
