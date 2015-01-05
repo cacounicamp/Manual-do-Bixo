@@ -55,8 +55,8 @@ Tarefas
 
 2015:
 + Arte
-  - [ ] Capa
-  - [ ] Contra capa
+  - [x] Capa
+  - [x] Contra capa
 
 + Estrutra:
   - [ ] Rearranjar seções (?)
@@ -65,11 +65,11 @@ Tarefas
 + Conteúdo:
   - [x] Atualizar valor médio de aluguel (fazer pesquisa entre alunos)
   - [x] Revisar preços (moradia, comida, transporte)
-  - [ ] Atualizar mensagem do diretor do IC
+  - [x] Atualizar mensagem do diretor do IC
   - [x] Atualizar seções das entidades
   - [x] Adicionar mais entidades
-  - [ ] Revisar telefones
-  - [ ] Revisar links
+  - [x] Revisar telefones
+  - [x] Revisar links
   - [ ] Spell-checking
 
 Antigos (Checar se foram implementados):
@@ -92,4 +92,4 @@ Antigos (Checar se foram implementados):
         melhor a Unicamp
   - [x] Retirar cantinas do IMECC, da Artes e outras que fecharam
   - [ ] Empresas de Barão Geraldo
-  - [ ] Atualizar horário do RA
+  - [x] Atualizar horário do RA
