@@ -61,8 +61,9 @@
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
 
-% Comando para deixar emails na formatação e com link correto
+% Comando para deixar emails e URLs na formatação e com link correto
 \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
+\renewcommand{\url}[1]{\href{http://#1}{\nolinkurl{#1}}}
 
 % Environment que cria listas com menor espaçamento vertical
 \newenvironment{compactitemize}{
@@ -95,7 +96,7 @@
 \paragraph{}
 Este trabalho está licenciado sob a Licença Attribution-ShareAlike 3.0 Brasil da
 Creative Commons. Para ver uma cópia desta licença, visite
-\url{http://creativecommons.org/licenses/by-sa/3.0/br}
+\url{creativecommons.org/licenses/by-sa/3.0/br}
 
 \begin{figure}[H]
     \centering
