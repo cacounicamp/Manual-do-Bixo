@@ -1,6 +1,5 @@
-\documentclass[a4paper,10pt,openleft]{book}
-\usepackage{fullpage}
-
+\documentclass[a4paper,10pt,oldfontcommands]{memoir}
+\usepackage[headings]{fullpage}
 \usepackage[utf8]{inputenc}
 \usepackage{ucs}
 \usepackage[T1]{fontenc}
@@ -20,7 +19,6 @@
 \usepackage{multirow}
 \usepackage{indentfirst}
 \usepackage{multicol}
-\usepackage{fancyhdr}
 \usepackage{dblfloatfix}
 \usepackage{fixltx2e}
 \usepackage{float}
@@ -42,27 +40,27 @@
     hidelinks
 }
 
-% numera somente até o nível de section
+% numera somente até o nível de section, mostra no índice
+% até subsection
 \setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{2}
 
-% indenta subsubsections no sumário
+% indenta subsections no sumário
 \usepackage{tocloft}
 \cftsetindents{subsection}{5em}{0cm}
 
+\makepagestyle{fancy}
 %%%%% Headers and Footers
-\fancyhf{}
-\fancyhead[LE, RO]{Manual do Bixo \the\year}
-\fancyhead[RE]{\rightmark}
-\fancyhead[LO]{\leftmark}
-\fancyfoot[EL, OR]{\thepage}
-\fancyfoot[RE]{Centro Acadêmico da Computação}
-\fancyfoot[LO]{CACo}
-\renewcommand{\headrulewidth}{0.2pt}
-\renewcommand{\footrulewidth}{0.2pt}
-\renewcommand{\headsep}{15pt}
-\renewcommand{\footskip}{30pt}
-\renewcommand{\textheight}{642pt}
-\renewcommand{\voffset}{0pt}
+\makeevenhead{headings}{Manual do Bixo \the\year}{}{\rightmark}
+\makeevenfoot{headings}{\thepage}{}{Centro Acadêmico da Computação}
+
+\makeoddhead{headings}{\leftmark}{}{Manual do Bixo \the\year}
+\makeoddfoot{headings}{CACo}{}{\thepage}
+
+\makeheadrule{headings}{\textwidth}{\normalrulethickness}
+\makefootrule{headings}{\textwidth}{\normalrulethickness}{3pt}
+\renewcommand{\headheight}{13pt}
+
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
@@ -70,6 +68,7 @@
 % Comando para deixar emails e URLs na formatação e com link correto
 \newcommand{\email}[1]{\href{mailto:#1}{\nolinkurl{#1}}}
 \renewcommand{\url}[1]{\href{http://#1}{\nolinkurl{#1}}}
+
 
 % Environment que cria listas com menor espaçamento vertical
 \newenvironment{compactitemize}{
@@ -87,14 +86,12 @@
 \pagestyle{empty}
 \frontmatter
 \begin{figure}[H]
-    \vskip 50pt % vskip serve para deixar um espaço entre o topo da página
     \centering
     \includegraphics[width=.85\textwidth]{img/manual_logo.png}
 \end{figure}
 
 \cleardoublepage
 \begin{figure}[H]
-    \vskip 50pt % vskip serve para deixar um espaço entre o topo da página
     \centering
     \includegraphics[width=.85\textwidth]{img/manual_logo.png}
 \end{figure}
@@ -186,7 +183,7 @@ Aproveite!
 
 % aqui começa o manual
 \mainmatter
-\pagestyle{fancy}
+\pagestyle{headings}
 \twocolumn
 \chapter{Olá Mundo!}
 
