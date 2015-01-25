@@ -1,7 +1,6 @@
 \documentclass[a4paper,10pt,oldfontcommands]{memoir}
 \usepackage[headings]{fullpage}
 \usepackage[utf8]{inputenc}
-\usepackage{ucs}
 \usepackage[T1]{fontenc}
 \usepackage{tgpagella}
 \usepackage{graphicx}
@@ -17,6 +16,7 @@
 \usepackage[hyphens]{url}
 \usepackage{color}
 \usepackage{multirow}
+% indenta primeira linha de seções
 \usepackage{indentfirst}
 \usepackage{multicol}
 \usepackage{dblfloatfix}
@@ -25,7 +25,7 @@
 \usepackage{wrapfig}
 \usepackage{enumitem}
 % microtipografia (menos overfull hbox)
-\usepackage[final]{microtype}
+\usepackage[final,protrusion=true,expansion]{microtype}
 % páginas em branco sem cabeçalho ou rodapé
 \usepackage{emptypage}
 % figuras lado a lado
@@ -40,8 +40,7 @@
     hidelinks
 }
 
-% numera somente até o nível de section, mostra no índice
-% até subsection
+% numera somente até o nível de section, mostra no índice até subsection
 \setcounter{secnumdepth}{1}
 \setcounter{tocdepth}{2}
 
@@ -49,18 +48,20 @@
 \usepackage{tocloft}
 \cftsetindents{subsection}{5em}{0cm}
 
-\makepagestyle{fancy}
-%%%%% Headers and Footers
+% cabeçalho e rodapé
+\nouppercaseheads
+
 \makeevenhead{headings}{Manual do Bixo \the\year}{}{\rightmark}
 \makeevenfoot{headings}{\thepage}{}{Centro Acadêmico da Computação}
+\makeevenfoot{plain}{\thepage}{}{}
 
 \makeoddhead{headings}{\leftmark}{}{Manual do Bixo \the\year}
 \makeoddfoot{headings}{CACo}{}{\thepage}
+\makeoddfoot{plain}{}{}{\thepage}
 
+\renewcommand{\headheight}{13pt}
 \makeheadrule{headings}{\textwidth}{\normalrulethickness}
 \makefootrule{headings}{\textwidth}{\normalrulethickness}{3pt}
-\renewcommand{\headheight}{13pt}
-
 
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
@@ -83,6 +84,7 @@
 }
 
 \begin{document}
+
 \pagestyle{empty}
 \frontmatter
 \begin{figure}[H]
@@ -94,30 +96,29 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=.85\textwidth]{img/manual_logo.png}
+    \caption*{\textsf{\huge Seu guia de sobrevivência na universidade e além}}
 \end{figure}
 \begin{center}
-\textsf{\huge Seu guia de sobrevivência na universidade e além}
 
-\vfill % o vfill é pra jogar o texto na licença pro final da página
+\vfill % o vfill é pra jogar o logo pro final da página
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=.4\textwidth]{img/caco_logo.pdf}
-\end{figure}
-
-
-Centro Acadêmico da Computação
+    \caption*{Centro Acadêmico da Computação
 
 Universidade Estadual de Campinas
 
-\the\year
-\clearpage
+\the\year}
+\end{figure}
 
+
+
+\clearpage
+\setlength{\parskip}{1em}
 Copyright ~ \copyright ~ 2011-\the\year ~ Centro Acadêmico da Computação
 
-\paragraph{}
 \url{www.caco.ic.unicamp.br}
-
 
 \begin{figure}[h]
 \centering
@@ -132,22 +133,18 @@ Copyright ~ \copyright ~ 2011-\the\year ~ Centro Acadêmico da Computação
 \end{subfigure}
 \end{figure}
 
-\paragraph{}
 Este trabalho está licenciado sob a Licença Attribution-ShareAlike 3.0 Brasil da
 Creative Commons. Para ver uma cópia desta licença, visite
 \url{creativecommons.org/licenses/by-sa/3.0/br}
 
-\paragraph{}
 Para obter uma cópia do código fonte usado para gerar este livro, visite nosso
 repositório em \url{github.com/cacounicamp/Manual-do-Bixo}.
 
-\paragraph{}
 Para obter a versão mais atualizada deste manual, acesse \url{bit.ly/1usUfYO}.
 
-
-\paragraph{}
 Capa: Isadora Sophia Garcia Rodopoulos
 
+\setlength{\parskip}{0em}
 \vfill
 
 Diagramado em \LaTeX\,e composto em \TeX\,Gyre Pagella
@@ -161,26 +158,24 @@ Impresso pela Gráfica Central da Unicamp, em couchê \SI{230}{g/m^2} na capa, e
 \tableofcontents
 
 \chapter{Prefácio}
+\setlength{\parskip}{1em}
 
 Bem-vindo!
 
-\paragraph{}
 Este é o Manual do Bixo do CACo, o Centro Acadêmico da Computação. Ele foi
 elaborado por seus veteranos (alunos e ex-alunos) e inclui diversas dicas para
 auxiliar a sua sobrevivência neste primeiro ano na Unicamp. Você provavelmente
 recebeu a versão impressa nas primeiras semanas de aula (senão, passe na salinha
 do CACo para pegar uma).
 
-\paragraph{}
 Nós trabalhamos muito para que as informações presentes aqui sejam úteis,
 corretas e atuais, mas é possível que tenhamos deixado alguma coisa passar. Se
 você encontrar qualquer informação incorreta ou desatualizada, seja um bom bixo
 e nos avise em \email{caco@ic.unicamp.br}.
 
-\paragraph{}
 Aproveite!
 
-
+\setlength{\parskip}{0em}
 % aqui começa o manual
 \mainmatter
 \pagestyle{headings}
