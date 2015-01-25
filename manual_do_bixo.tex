@@ -1,18 +1,12 @@
 \documentclass[a4paper,10pt,openany]{book}
 \usepackage{fullpage}
-\usepackage{ifxetex}
 
-\ifxetex
-    \usepackage{fontspec}
-    \setmainfont[Mapping=tex-text]{TeX Gyre Pagella} % Pallazo
-    \usepackage{graphicx}
-\else
-    \usepackage[utf8]{inputenc}
-    \usepackage{ucs}
-    \usepackage[T1]{fontenc}
-    \usepackage{tgpagella}
-    \usepackage{graphicx}
-\fi
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage[T1]{fontenc}
+\usepackage{tgpagella}
+\usepackage{graphicx}
+
 
 \DeclareGraphicsExtensions{.pdf,.eps,.png,.jpg}
 
@@ -33,6 +27,7 @@
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{enumitem}
+\usepackage[final]{microtype}
 \usepackage[breaklinks]{hyperref}
 \hypersetup{
     bookmarks=true,
@@ -67,9 +62,9 @@
 
 % Environment que cria listas com menor espaçamento vertical
 \newenvironment{compactitemize}{
-    \begin{itemize}[noitemsep,nolistsep]
+\begin{itemize}[noitemsep,nolistsep]
 }{
-    \end{itemize}
+\end{itemize}
 }
 \newenvironment{compactenumerate}{
     \begin{enumerate}[noitemsep,nolistsep]
