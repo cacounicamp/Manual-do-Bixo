@@ -53,43 +53,21 @@ o padrão "vANO" ANO onde é o ano em que o manual vai ser entregue, com
 Tarefas
 -------
 
-2015:
+2016:
 + Arte
-  - [x] Capa
-  - [x] Contra capa
-
-+ Estrutra:
-  - [ ] Rearranjar seções (?)
-  - [ ] Automatizar geração do manual com capa (?)
+  - [ ] Capa
+  - [ ] Contra capa
 
 + Conteúdo:
-  - [x] Atualizar valor médio de aluguel (fazer pesquisa entre alunos)
-  - [x] Revisar preços (moradia, comida, transporte)
-  - [x] Atualizar mensagem do diretor do IC
-  - [x] Atualizar seções das entidades
-  - [x] Adicionar mais entidades
-  - [x] Revisar telefones
-  - [x] Revisar links
+  - [ ] Atualizar valor médio de aluguel (fazer pesquisa entre alunos)
+  - [ ] Atualizar cantinas da Unicamp que abriram e fecharam
+  - [ ] Revisar preços (moradia, comida, transporte)
+  - [ ] Atualizar seções das entidades
+  - [ ] Adicionar mais entidades
+  - [ ] Revisar telefones
+  - [ ] Revisar links
   - [ ] Spell-checking
-
-Antigos (Checar se foram implementados):
-
-+ 2014
-  - [x] Revisar prefácio
-  - [x] Atualizar informações sobre webmail2 (IC)
-  - [ ] Adicionar informações do wprint
-  - [ ] Adicionar mapa com itinerário dos circulares
-  - [x] Adicionar informações do circular externo
-  - [x] Adicionar link da wiki do suporte do IC
   - [ ] Adicionar informações sobre como a mudança de catálogo funciona
-
-+ 2013
   - [ ] Melhorar a documentação interna
-
-+ Coisas antigas que estavam no manual da gestão:
   - [ ] Adicionar texto sobre história da computação
-  - [ ] Pedir ao Cid um texto sobre como aproveitar
-        melhor a Unicamp
-  - [x] Retirar cantinas do IMECC, da Artes e outras que fecharam
-  - [ ] Empresas de Barão Geraldo
-  - [x] Atualizar horário do RA
+  
