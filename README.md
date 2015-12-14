@@ -11,13 +11,11 @@ Compilando
 O build system utilizado é o scons.
 
  - Para compilar o manual: `scons`
- - Para compilar com fallback para o latex original: `scons latex.pdf`
  - Para limpar os arquivos temporários de compilação: `scons --clean`
 
 Dependências:
 
- - Distribuição de LaTeX com suporte a XeTeX (utilize preferencialmente o
-   tex-live)
+ - Distribuição de LaTeX (utilize preferencialmente o tex-live)
  - Fonte atual: TeX Gyre Pagella
 
 Como contribuir
@@ -28,6 +26,7 @@ de emails do [CACo](www.caco.ic.unicamp.br). Se estiver disposto a contribuir
 mais seriamente, você pode abrir issues/forkar esse repositório no github e
 mandar pull requests com alterações. Observe as seguintes convenções:
 
+ - **Sempre** teste suas mudanças antes de comitar na branch master
  - Tente manter as linhas com no máximo 80 colunas
  - Comente quaisquer truques de latex ou outras ferramentas que você usar em sua
    contribuição (lembre-se que outras pessoas poderão ter de mexer nisso)
@@ -38,6 +37,7 @@ mandar pull requests com alterações. Observe as seguintes convenções:
  - Evite nomes de arquivos cuja diferença seja apenas a capitalização. Ex:
    `Padaria.png` e `padaria.png` são o mesmo arquivo em um sistema Windows, mas
    não em um \*nix, e a idéia do manual é ser portável
+ - Da mesma forma, evite caracteres especiais em nomes de arquivos
  - Use sempre `subsubsection*`, nesse caso os números apenas ocupam espaço
    desnecessariamente
 
