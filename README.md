@@ -1,8 +1,8 @@
-Manual do bixo - Centro Acadêmico da Computação (CACo)
+Manual do Bixo - Centro Acadêmico da Computação (CACo)
 ======================================================
 
-Este é o manual do bixo, criado pelo Centro Acadêmico da Computação, CACo,
-distribuído aos ingressantes nos cursos de engenharia e ciencia da computação
+Este é o Manual do Bixo, criado pelo Centro Acadêmico da Computação, CACo,
+distribuído aos ingressantes nos cursos de Engenharia e Ciência da Computação
 da Unicamp.
 
 Compilando
@@ -28,10 +28,10 @@ mandar pull requests com alterações. Observe as seguintes convenções:
 
  - **Sempre** teste suas mudanças antes de comitar na branch master
  - Tente manter as linhas com no máximo 80 colunas
- - Comente quaisquer truques de latex ou outras ferramentas que você usar em sua
+ - Comente quaisquer truques de LaTeX ou outras ferramentas que você usar em sua
    contribuição (lembre-se que outras pessoas poderão ter de mexer nisso)
  - Utilize, preferencialmente, um arquivo para cada seção (ou agrupe algumas
-   seções no mesmo arquivo), e os inclua no arquivo principal com \input
+   seções no mesmo arquivo), e os inclua no arquivo principal com `\input`
  - Escreva mensagens de commit em português e que resumam o que cada alteração
    representa
  - Evite nomes de arquivos cuja diferença seja apenas a capitalização. Ex:
