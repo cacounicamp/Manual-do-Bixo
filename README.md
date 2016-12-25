@@ -68,4 +68,15 @@ Tarefas
   - [ ] Adicionar informações sobre como a mudança de catálogo funciona
   - [ ] Melhorar a documentação interna
   - [ ] Adicionar texto sobre história da computação
+  - [ ] Cursos da Casa do Lago
+  - [ ] Cursos de Líguas (CEL)
+  - [ ] Cursos da FEF
+  - [ ] Bolsa trabalho e PAD
+  - [ ] Breve descrição AA/AB
+  - [ ] Mudança de Catálogo
+  - [ ] CACo Empresta
+  - [ ] Representatividade do CACo
+  - [ ] Alteração de Matrícula
+  - [ ] Asteriscos
+  - [ ] Salinha
   
