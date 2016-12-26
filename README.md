@@ -63,7 +63,7 @@ Tarefas
   - [ ] Atualizar seções das entidades
   - [ ] Adicionar mais entidades
   - [ ] Revisar telefones
-  - [x] Revisar links
+  - [ ] Revisar links
   - [ ] Spell-checking
   - [ ] Melhorar a documentação interna
   - [ ] Adicionar texto sobre história da computação
