@@ -65,7 +65,6 @@ Tarefas
   - [ ] Revisar telefones
   - [ ] Revisar links
   - [ ] Spell-checking
-  - [ ] Adicionar informações sobre como a mudança de catálogo funciona
   - [ ] Melhorar a documentação interna
   - [ ] Adicionar texto sobre história da computação
   - [ ] Cursos da Casa do Lago
@@ -74,9 +73,9 @@ Tarefas
   - [ ] Bolsa trabalho e PAD
   - [ ] Breve descrição AA/AB
   - [ ] Mudança de Catálogo
-  - [ ] CACo Empresta
+  - [x] CACo Empresta
   - [ ] Representatividade do CACo
-  - [ ] Alteração de Matrícula
+  - [x] Alteração de Matrícula
   - [ ] Asteriscos
-  - [ ] Salinha
+  - [x] Salinha
   
