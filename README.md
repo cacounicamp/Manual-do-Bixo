@@ -63,7 +63,7 @@ Tarefas
   - [ ] Atualizar seções das entidades
   - [ ] Adicionar mais entidades
   - [ ] Revisar telefones
-  - [ ] Revisar links
+  - [x] Revisar links
   - [ ] Spell-checking
   - [ ] Melhorar a documentação interna
   - [ ] Adicionar texto sobre história da computação
@@ -72,7 +72,7 @@ Tarefas
   - [ ] Cursos da FEF
   - [ ] Bolsa trabalho e PAD
   - [ ] Breve descrição AA/AB
-  - [ ] Mudança de Catálogo
+  - [x] Mudança de Catálogo
   - [x] CACo Empresta
   - [ ] Representatividade do CACo
   - [x] Alteração de Matrícula
