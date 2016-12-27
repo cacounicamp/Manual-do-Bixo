@@ -72,7 +72,7 @@ Tarefas
   - [ ] Cursos da FEF
   - [ ] Bolsa trabalho e PAD
   - [ ] Breve descrição AA/AB
-  - [ ] Mudança de Catálogo
+  - [x] Mudança de Catálogo
   - [x] CACo Empresta
   - [ ] Representatividade do CACo
   - [x] Alteração de Matrícula
