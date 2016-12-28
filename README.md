@@ -67,9 +67,9 @@ Tarefas
   - [ ] Spell-checking
   - [ ] Melhorar a documentação interna
   - [ ] Adicionar texto sobre história da computação
-  - [ ] Cursos da Casa do Lago
+  - [x] Cursos da Casa do Lago
   - [ ] Cursos de Líguas (CEL)
-  - [ ] Cursos da FEF
+  - [x] Cursos da FEF
   - [ ] Bolsa trabalho e PAD
   - [ ] Breve descrição AA/AB
   - [x] Mudança de Catálogo
