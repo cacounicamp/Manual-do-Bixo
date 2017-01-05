@@ -58,11 +58,11 @@ Tarefas
 
 + Conteúdo:
   - [ ] Atualizar valor médio de aluguel (fazer pesquisa entre alunos)
-  - [ ] Atualizar cantinas da Unicamp que abriram e fecharam
+  - [x] Atualizar cantinas da Unicamp que abriram e fecharam
   - [ ] Revisar preços (moradia, comida, transporte)
-  - [ ] Atualizar seções das entidades
-  - [ ] Adicionar mais entidades
-  - [ ] Revisar telefones
+  - [x] Atualizar seções das entidades
+  - [x] Adicionar mais entidades
+  - [x] Revisar telefones
   - [x] Revisar links
   - [ ] Spell-checking
   - [ ] Melhorar a documentação interna
@@ -70,12 +70,12 @@ Tarefas
   - [x] Cursos da Casa do Lago
   - [ ] Cursos de Líguas (CEL)
   - [x] Cursos da FEF
-  - [ ] Bolsa trabalho e PAD
+  - [ ] Bolsa trabalho
+  - [ ] PAD
   - [ ] Breve descrição AA/AB
   - [x] Mudança de Catálogo
   - [x] CACo Empresta
   - [ ] Representatividade do CACo
   - [x] Alteração de Matrícula
-  - [ ] Asteriscos
   - [x] Salinha
   
