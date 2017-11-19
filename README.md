@@ -2,7 +2,7 @@ Manual d* Bix* - Centro Acadêmico da Computação (CACo)
 ======================================================
 
 Este é o Manual d* Bix*, criado pelo Centro Acadêmico da Computação, CACo,
-distribuído aos ingressantes nos cursos de Engenharia e Ciência da Computação
+distribuído aos ingressantes nos cursos de engenharia e ciência da computação
 da Unicamp.
 
 Compilando
@@ -28,6 +28,8 @@ seriamente, você pode abrir participar desse repositório no GitHub e mandar
 alterações. Observe as seguintes convenções:
 
  - **Sempre** teste suas mudanças antes de mandar modificações no ramo "master"
+ (nunca se sabe quando pequenas alteraçes quebram o codigo, quem nunca esqueceu
+ um ponto e vírgula?)
  - Tente manter as linhas com no máximo 80 colunas
  - Comente quaisquer truques de LaTeX ou outras ferramentas que você usar em
    sua contribuição (lembre-se que outras pessoas irão atualizar o manual e
