@@ -54,7 +54,7 @@ Pendências
 -------
 
 Tarefas para 2017, edição 2018:
-+ Arte
++ Arte:
   - [ ] Capa
   - [ ] Contra capa
 
