@@ -51,33 +51,4 @@ Manutenção de versões
 A cada nova versão completada, criar uma "tag" no último commit estável
 seguindo o padrão "vANO" onde ANO é o ano em que o manual vai ser entregue, com
 4 dígitos, além disso, inclua um pdf pronto na seção de downloads do GitHub.
-
-Pendências
--------
-
-Tarefas para 2017, edição 2018:
-+ Arte:
-  - [ ] Capa
-  - [ ] Contra capa
-
-+ Conteúdo adicional:
-  - [ ] Adicionar mais entidades
-  - [ ] Adicionar texto sobre história da computação
-  - [ ] Cursos de Líguas (CEL)
-  - [ ] Bolsa trabalho
-  - [ ] Sistema PAD
-  - [ ] Representatividade do CACo
-  - [ ] Breve descrição AA/AB
-
-+ Revisão de conteúdo:
-  - [ ] Revisar preços com uma pesquisa entre os alunos (moradia, comida,
-    transporte)
-  - [ ] Atualizar lugares da seção "Comida" que abriram ou fecharam
-  - [ ] Reordenar a seção "Comida"
-  - [ ] Atualizar seções das entidades
-  - [ ] Revisar telefones
-  - [ ] Revisar links
-  - [ ] Conferir hortografia (rs, está escrito errado porque não conferimos
-    ainda)
-  - [ ] Melhorar a documentação interna
   
