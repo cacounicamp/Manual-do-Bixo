@@ -20,7 +20,6 @@
 \usepackage{indentfirst}
 \usepackage{multicol}
 \usepackage{dblfloatfix}
-\usepackage{fixltx2e}
 \usepackage{float}
 \usepackage{wrapfig}
 \usepackage{enumitem}
@@ -38,7 +37,7 @@
 \usepackage[breaklinks]{hyperref}
 \hypersetup{
     bookmarks=true,
-    pdftitle={Manual do Bixo \the\year},
+    pdftitle={Manual d* Bix* \the\year},
     pdfauthor={Centro Acadêmico da Computação - CACo},
     hidelinks
 }
@@ -54,11 +53,11 @@
 % cabeçalho e rodapé
 \nouppercaseheads
 
-\makeevenhead{headings}{Manual do Bixo \the\year}{}{\rightmark}
+\makeevenhead{headings}{Manual d* Bix* \the\year}{}{\rightmark}
 \makeevenfoot{headings}{\thepage}{}{Centro Acadêmico da Computação}
 \makeevenfoot{plain}{\thepage}{}{}
 
-\makeoddhead{headings}{\leftmark}{}{Manual do Bixo \the\year}
+\makeoddhead{headings}{\leftmark}{}{Manual d* Bix* \the\year}
 \makeoddfoot{headings}{CACo}{}{\thepage}
 \makeoddfoot{plain}{}{}{\thepage}
 
@@ -89,7 +88,8 @@
 % Definicao do "shrug" ¯\_(ツ)_/¯
 \def\shrug{\normalsize\texttt{\raisebox{0.75em}{\char`\_}\char`\\\char`\_\kern
 -0.5ex(\kern-0.25ex\raisebox{0.25ex}{\rotatebox{45}{\raisebox{-.75ex}"\kern
--1.5ex\rotatebox{-90})}}\kern-0.5ex)\kern-0.5ex\char`\_/\raisebox{0.75em}{\char`\_}}}
+-1.5ex\rotatebox{-90})}}\kern-0.5ex)\kern-0.5ex\char`\_/\raisebox{0.75em}
+{\char`\_}}}
 
 \begin{document}
 
@@ -141,14 +141,15 @@ Copyright ~ \copyright ~ 2011-\the\year ~ Centro Acadêmico da Computação
 \end{subfigure}
 \end{figure}
 
-Este trabalho está licenciado sob a Licença Attribution-ShareAlike 3.0 Brasil da
-Creative Commons. Para ver uma cópia desta licença, visite
+Este trabalho está licenciado sob a Licença Attribution-ShareAlike 3.0 Brasil
+da Creative Commons. Para ver uma cópia desta licença, visite
 \url{creativecommons.org/licenses/by-sa/3.0/br}
 
 Para obter uma cópia do código fonte usado para gerar este livro, visite nosso
 repositório em \url{github.com/cacounicamp/Manual-do-Bixo}.
 
-Para obter a versão mais atualizada deste manual, acesse \url{bit.ly/manualdobixo}.
+Para obter a versão mais atualizada deste manual, acesse
+\url{bit.ly/manualdobixo}.
 
 Capa: Klaus D'Orásio Leão (\email{klaus_leao@icloud.com})
 
@@ -157,8 +158,8 @@ Capa: Klaus D'Orásio Leão (\email{klaus_leao@icloud.com})
 
 Diagramado em \LaTeX\,e composto em \TeX\,Gyre Pagella
 
-Impresso pela Gráfica Central da Unicamp, em couchê \SI{230}{g/m^2} na capa, e offset
-\SI{75}{g/m^2} no miolo.
+Impresso pela Gráfica Central da Unicamp em couchê \SI{230}{g/m^2} na capa e
+offset \SI{75}{g/m^2} no miolo.
 
 \end{center}
 \cleardoublepage
@@ -170,21 +171,25 @@ Impresso pela Gráfica Central da Unicamp, em couchê \SI{230}{g/m^2} na capa, e
 
 Bem-vind*!
 
-Este é o Manual do Bix* do CACo, o Centro Acadêmico da Computação. Ele foi
+Este é o Manual d* Bix* do CACo, o Centro Acadêmico da Computação. Ele foi
 elaborado por veteran*s (alun*s e ex-alun*s) e inclui diversas dicas para
 auxiliar a sua sobrevivência neste primeiro ano na Unicamp. Você provavelmente
-recebeu a versão impressa nas primeiras semanas de aula (senão, passe na salinha
-do CACo para pegar uma).
+recebeu a versão impressa nas primeiras semanas de aula (senão, passe na
+salinha do CACo -- no IC-3, ao lado do suporte, como falaremos pelo manual --
+para pegar uma).
 
 Nós trabalhamos muito para que as informações presentes aqui sejam úteis,
-corretas e atuais, mas é possível que tenhamos deixado alguma coisa passar. Se
-você encontrar qualquer informação incorreta ou desatualizada, seja um(a) bom
-bix* e nos avise em \email{caco@ic.unicamp.br}.
+corretas e atuais, no entanto, não é possível atualizar o manual todo, refazer
+as pesquisas todos os anos, então contamos com a ajuda de você, bix*! Se você
+encontrar qualquer informação incorreta ou desatualizada, nos avise em
+\email{caco@ic.unicamp.br}, mande-nos uma mensagem no Facebook ou o atualize
+você mesmo, pois ele está esperando sua colaboração em
+\url{github.com/cacounicamp/Manual-do-Bixo}!
 
 \subsection{Sobre o uso de *'s}
-Com certeza vocês já devem ter notado que o escrito na capa do nosso manual é um
-pouco incomum, não é?  Acham que foi erro de digitação? Falta de atenção nossa?
-Muito pelo contrário!
+Com certeza vocês já devem ter notado que o escrito na capa do nosso manual é
+um pouco incomum, não é?  Acham que foi erro de digitação? Falta de atenção
+nossa? Muito pelo contrário!
 
 Com certeza vocês, ex-vestibuland*s (aleluia!) e human*s do século XXI, estão
 antenad*s nas lutas sociais que estão acontecendo a sua volta e uma delas é a
@@ -215,81 +220,81 @@ Aproveite!
 \chapter{Olá Mundo!}
 
 %%%%% Bem-vindo
-\input{ola_mundo/bem_vind0x2a.tex}
+\input{01-ola_mundo/bem_vind0x2a.tex}
 \clearpage
 
 %%%%% Mensagem do diretor da FEEC
-\input{ola_mundo/mensagem_feec.tex}
+\input{01-ola_mundo/mensagem_feec.tex}
 \clearpage
 
 %%%%% Mensagem do diretor do IC
-\input{ola_mundo/mensagem_ic.tex}
+\input{01-ola_mundo/mensagem_ic.tex}
 \clearpage
 
 %%%%% Para pensar
-\input{ola_mundo/pra_pensar.tex}
+\input{01-ola_mundo/pra_pensar.tex}
 
 \chapter{Sobrevivendo em Barão}
 %%%%% Lugares para morar
-\input{barao/lugares_para_morar.tex}
+\input{02-barao/lugares_para_morar.tex}
 \newpage
 %%%%% Comida
-\input{barao/comida.tex}
+\input{02-barao/comida.tex}
 \newpage
 %%%%% Diversão
-\input{barao/diversao.tex}
+\input{02-barao/diversao.tex}
 \newpage
 %%%%% Transporte
-\input{barao/transporte.tex}
+\input{02-barao/transporte.tex}
 \newpage
 %%%%% Outras necessidades
-\input{barao/outras_necessidades.tex}
+\input{02-barao/outras_necessidades.tex}
 
 \chapter{Estudando na Unicamp}
 %%%%% Disciplinas
-\input{unicamp/disciplinas.tex}
+\input{03-unicamp/disciplinas.tex}
 \newpage
 %%%%% SIGLAS malucas
-\input{unicamp/siglas.tex}
+\input{03-unicamp/siglas.tex}
 \newpage
 %%%%% Lugares para estudar
-\input{unicamp/lugares_para_estudar.tex}
+\input{03-unicamp/lugares_para_estudar.tex}
 \newpage
 %%%%% Cuidado com CR e Reprovação
-\input{unicamp/cr_reprovacao.tex}
+\input{03-unicamp/cr_reprovacao.tex}
 \newpage
 %%%%% Pra que que eu estou estudando isso??
-\input{unicamp/pra_que_estou_estudando_isso.tex}
+\input{03-unicamp/pra_que_estou_estudando_isso.tex}
 \newpage
 %%%%% Bem-vindo à academia
-\input{unicamp/bem_vindo_a_academia.tex}
+\input{03-unicamp/bem_vindo_a_academia.tex}
 \newpage
 %%%%% Emails acadêmicos
-\input{unicamp/email.tex}
+\input{03-unicamp/email.tex}
 \newpage
 %%%%% Melhores banheiros
-\input{unicamp/melhores_banheiros.tex}
+\input{03-unicamp/melhores_banheiros.tex}
 
 \chapter{Além da graduação}
 %%%%% Centro Acadêmico da Computação
-\input{alem_da_graduacao/caco.tex}
+\input{04-alem_da_graduacao/caco.tex}
 \newpage
 %%%%% Atlética -- AAACEC
-\input{alem_da_graduacao/aaacec.tex}
+\input{04-alem_da_graduacao/aaacec.tex}
 \newpage
 %%%%% Conpec
-\input{alem_da_graduacao/conpec.tex}
+\input{04-alem_da_graduacao/conpec.tex}
 \newpage
 %%%%% Computing 4 All
-\input{alem_da_graduacao/computing4all.tex}
+\input{04-alem_da_graduacao/computing4all.tex}
 \newpage
 %%%%% Grupos e Entidades da Unicamp
-\input{alem_da_graduacao/grupos_entidades.tex}
+\input{04-alem_da_graduacao/grupos_entidades.tex}
 \newpage
 %%%% Eventos da Unicamp
-\input{alem_da_graduacao/eventos.tex}
+\input{04-alem_da_graduacao/eventos.tex}
 \newpage
 %%%%% Serviços da Unicamp
-\input{alem_da_graduacao/servicos.tex}
+\input{04-alem_da_graduacao/servicos.tex}
 
 \end{document}
