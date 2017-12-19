@@ -48,7 +48,12 @@ Como qualquer lista de regras, elas podem ser quebradas dado um bom argumento =)
 Manutenção de versões
 ---------------------
 
-A cada nova versão completada, criar uma "tag" no último commit estável
-seguindo o padrão "vANO" onde ANO é o ano em que o manual vai ser entregue, com
-4 dígitos, além disso, inclua um pdf pronto na seção de downloads do GitHub.
-  
+Para cada versão completada:
+ - Crie uma "tag" no Github após a última "commit" estável. Seu nome deve ser
+   no formato "v{ANO}" onde {ANO} é o ano de quatro dígitos em que o manual
+   será distribuído.
+ - Anexe o PDF compilado do Manual à "tag" criada.
+ - Peça um orçamento à Editora da Unicamp do Manual com as especificações de
+   folha encontradas nas primeiras páginas do manual.
+ - Passe o orçamento ao financeiro do IC através do CACo e confirme a impressão
+   com a editora.
