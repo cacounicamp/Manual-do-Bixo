@@ -1,6 +1,19 @@
 % Este arquivo .tex será incluído no arquivo .tex principal. Não é preciso
 % declarar nenhum cabeçalho
 
+%
+% Este arquivo foi remodelado para TENTAR deixar o mais organizado possível.
+% Note que os estabelecimentos em Barão Geraldo são uma zona, então é bem
+% difícil tornar isto bonito. Para isso, acho que vale a pena definir algumas
+% instruções:
+%
+% * Manter poucas categorias para simplicidade, não colocar estabelecimentos
+% como 'subsection'/'subsubsection' mas como itens de um 'itemize', com o nome
+% em negrito,
+% * Tentar explicar brevemente o que o local serve, usando uma linguagem
+% universal, sem muitas gírias ou abreviações.
+%
+
 \section{Comida dentro da Unicamp}
 \subsection{Os restaurantes universitários da Unicamp}
 
@@ -113,6 +126,109 @@ amigos tentando advinhar qual será a geleia do dia.
 
 \subsection{Outros lugares na Unicamp}
 
+\subsubsection{Cantinas}
 
+Há várias cantinas espalhadas pela Unicamp, pode ser bem cara às vezes, mas
+sempre tem aquele combo razoável de algum salgado com um suco feito na hora ou
+pão de queijo com café. Quase todas possuem salgados prontos, lanches naturais
+e alguns doces. Algumas até fazem X-salada e pão na chapa.
+
+\begin{itemize}
+\item \textbf{Cantina da Física}
+  \\Próximo ao CB, possui self-service.
+\item \textbf{Cantina da Biologia}
+  \\Próximo ao CB, possui self-service e marmita.
+\item \textbf{Cantina da Química}
+  \\Próximo ao CB, possui prato-feito, abre também aos sábados.
+  \\O melhor é o pão de queijo em dobro às quartas e quintas!
+\item \textbf{Banca de sucos do CB}
+  \\Como no nome, fica próximo ao CB, possui diversas opções de sucos, vende
+  frutas e salgados. Se quiser almoçar rápido, um salgado e uma vitamina é a
+  nossa recomendação.
+  \\Todo dia há um sabor de suco em oferta, ótima oportunidade para sair do
+  tradicional suco de laranja.
+\item \textbf{Gatti}
+  \\Fica do lado do IC-2, na Cênicas/Dança.
+  \\Se você é vegetariano, é uma boa dica.
+\item \textbf{Cantina da Educação}
+  \\Também ao lado do IC-2, tem self-service.
+  \\Se você é vegetariano, é uma boa dica.
+\item \textbf{Cantina da Economia}
+  \\Ao outro lado do IC-2, tem bons lanches.
+\item \textbf{Cantina da Mecânica}
+  \\Fica próximo à FEEC, abre bem cedo, serve o bom pingado (café com leite)
+  com pão na chapa matinal.
+\item \textbf{Cantina da FEA/FEM}
+  \\Próxima à FEEC, possui self-service no almoço e bons lanches.
+  \\Pra quem não gosta de café, fica a dica da latinha de Red Bull a R\$ 5,99.
+\end{itemize}
+
+Sobre açaí: se você tiver de ir até as salas de aula da medicina, estiver
+cansada e morrendo para tomar um açaí, o da cantina de lá é caro e ruim.
+Prefira os da feirinha, falaremos mais dela abaixo.
+
+\subsubsection{Feirinha}
+
+Nas quartas e quintas há uma feira no centro da praça do CB, na qual há opções
+bem variadas, desde pastéis a comida japonesa, embora geralmente mais caras que
+as cantinas. Uma opção interessante é o Porqueta, que serve costelinhas de
+porco assadas e sanduiches muito bem feitos, é um pouco caro. Outra é batata suíça que, por R\$12, mata sua fome até 18h30.
 
 \section{Comida fora da Unicamp}
+
+Em Barão Geraldo, muitos estabelecimentos fazem muita coisa, o que torna bem
+trabalhoso uma formatação razoável do material. Fizemos o seguinte: pegamos as
+categorias que consideramos ``mais procuradas'' e colocamos os estabelecimentos
+que abrangem mais categorias primeiro, como a Padaria Alemã que faz muito mais
+que uma padaria.
+
+Dividimos os estabelecimentos entre as categorias:
+
+% 'noitemsep' deixa os itens compactos, sem tanto espaço entre um e outro
+\begin{itemize}[noitemsep]
+% duas colunas de itens
+\begin{multicols}{2}
+\item padaria,
+\item pizzaria,
+\item salgados,
+\item lanchonete,
+\item bar,
+\item restaurante,
+\item marmita,
+\item sorveteria.
+\end{multicols}
+\end{itemize}
+
+\subsection{Padaria, pizzaria, salgados}
+
+\begin{itemize}
+% Dividi em 'subitems' espaçados para facilitar a leitura. Podemos tentar usar
+% o package 'easylist', mas achei desnecessário trocar por enquanto.
+% Espaçamento resolve o problema da leitura.
+\item \textbf{Padaria Alemã}
+  % Apresentação
+  \\Na av. 1, próxima ao supermercado Dalben, servem café da manhã, lanches e
+  pizzas.
+  \\
+  % Início das categorias 'lanches', 'café da manhã', 'pizzas' respectivamente
+  \\Os lanches são gigantescos e possuem várias opções de recheio por um preço
+  relativamente barato, já que um pode substituir um almoço.
+  \\
+  \\O café da manhã é servido das 7 às 13h, embora a padaria feche apenas às
+  22h. Serve um grande combo de café da manhã: suco, café com leite, chocolate
+  quente, croissant, mamão, bolo, pão francês, torradas, manteiga e geleia.
+  Você ainda pode fazer trocas, como suco por chocolate, croissant por 2 pães
+  na chapa, mamão por banana, pergunte o que oferecem!
+  \\
+  \\Também servem pizza que, dependendo do recheio, é muito barata.
+  Infelizmente não fazem entrega.
+  \\
+  % Recomendação
+  \\É um bom lugar para tomar café num sábado ou domingo valendo pelo almoço ou
+  para levar seus pais se eles puderem te visitar.
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=.45\textwidth]{img/barao/padaria.jpg}
+\end{figure}
