@@ -75,12 +75,12 @@
 
 % Environment que cria listas com menor espaçamento vertical
 \newenvironment{compactitemize}{
-\begin{itemize}[noitemsep,nolistsep]
+\begin{itemize}[noitemsep]% ,nolistsep] % Não tirar o espaço vertical, é bonito
 }{
 \end{itemize}
 }
 \newenvironment{compactenumerate}{
-    \begin{enumerate}[noitemsep,nolistsep]
+    \begin{enumerate}[noitemsep]% ,nolistsep]
 }{
     \end{enumerate}
 }

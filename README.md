@@ -42,6 +42,8 @@ alterações. Observe as seguintes convenções:
    `Padaria.png` e `padaria.png` são o mesmo arquivo em um sistema Windows, mas
    não em um \*nix, e a idéia do manual é ser portável
  - Da mesma forma, evite caracteres especiais em nomes de arquivos
+ - **SEMPRE** corrija erros de quebra de coluna ("paragraph too wide"). Cuidado
+   com links, palavras terminadas em "mente", palavras "como", "desde".
 
 Como qualquer lista de regras, elas podem ser quebradas dado um bom argumento =)
 
