@@ -23,7 +23,7 @@ Como contribuir
 
 Você pode mandar sugestões na
 [lista](http://groups.google.com/group/cacounicamp) de emails do
-[CACo](www.caco.ic.unicamp.br). Se estiver disposto a contribuir mais
+[CACo](https://www.caco.ic.unicamp.br). Se estiver disposto a contribuir mais
 seriamente, você pode abrir participar desse repositório no GitHub e mandar
 alterações. Observe as seguintes convenções:
 
