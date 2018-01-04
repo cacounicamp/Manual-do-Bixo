@@ -54,7 +54,8 @@ Para cada versão completada:
  - Crie uma "tag" no Github após a última "commit" estável. Seu nome deve ser
    no formato "v{ANO}" onde {ANO} é o ano de quatro dígitos em que o manual
    será distribuído.
- - Anexe o PDF compilado do Manual à "tag" criada.
+ - Anexe o PDF compilado e unificado com a capa e o verso do Manual à "tag"
+   criada. Você pode unificar usando o comando `pdfunite`.
  - Peça um orçamento à Editora da Unicamp do Manual com as especificações de
    folha encontradas nas primeiras páginas do manual.
  - Passe o orçamento ao financeiro do IC através do CACo e confirme a impressão
