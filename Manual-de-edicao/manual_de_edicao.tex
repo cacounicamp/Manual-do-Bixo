@@ -1,0 +1,500 @@
+% Documento do tipo report (tese, dissertações, relatórios) em A4
+\documentclass[a4paper,oneside,10pt]{memoir}
+
+
+% Permite a escrita com caracteres UTF-8
+\usepackage[utf8]{inputenc}
+% Documento com "Capítulo", "Seção" escrito em português
+\usepackage[brazil]{babel}
+% Indentar o primeiro parágrafo após seções
+\usepackage{indentfirst}
+% Adicionamos enumerações
+\usepackage{enumitem}
+% Adicionamos links
+\usepackage{hyperref}
+% 2 colunas para listas
+\usepackage{multicol}
+% Fonte Pagella
+\usepackage{tgpagella}
+
+\hypersetup{
+  %bookmarks=true,
+  pdftitle={Manual de edição do Manual d* Bix* - \the\year},
+  pdfauthor={Centro Acadêmico da Computação - CACo},
+  hidelinks
+}
+
+
+% Título e autores do documento, sem mostrar data
+\title{Manual de Edição do Manual d* Bix*}
+% Os autores foram escritos manualmente, pois não cabia na página. Pular linha
+% não funcionou
+\author{
+  Centro Acadêmico da Computação da Unicamp -- CACo
+  \and
+  Rafael Sartori Martins dos Santos
+  \and
+  Henrique Noronha Facioli
+}
+\date{\the\year}
+
+
+% Iniciamos o documento
+\begin{document}
+
+% Definimos o título da página
+\thispdfpagelabel{Capa}
+% Incluímos o título
+\maketitle
+
+\frontmatter
+% Adicionamos um sumário
+\tableofcontents
+
+\chapter{Prefácio}
+
+Como você já viu, o Manual d* Bix* é uma das tradições do CACo que tem um
+grande impacto, em especial por conter diversas informações úteis para quem
+está chegando na Unicamp, além disso, é um ótimo jeito de apresentarmos o
+centro acadêmico. Nosso manual é, de certa forma, uma referência na Unicamp por
+ter um conteúdo bem atualizado e completo, mas isso tem um custo: temos que
+revisá-lo todo ano. Nossa tática é concentrar o trabalho de edição no fim do
+ano, começando entre outubro e novembro (na calmaria, antes do caos das provas
+finais) e dando um gás em dezembro, logo após o fim das aulas.
+
+É fácil perceber que isso não é um trabalho simples e requer a participação em
+peso da gestão, mas, ao mesmo tempo, por utilizar \texttt{git} e \LaTeX, isso
+pode ser um tanto quanto impeditivo para a participação de novas pessoas que
+não tem tanta familiaridade com essas ferramentas. Por isso, aqui tentamos
+deixar um guia de como começar a colaborar. Tornando assim mais a fácil a
+participação de outros, além de ter uma forma de registrar as coisas que
+funcionaram bem no passado.
+
+Consideração importante: \texttt{git} é uma ferramenta muito poderosa. Como
+sabemos, com grande poder, vem grandes responsabilidades. Fazer caquinha é
+\textbf{MUITO} fácil em \texttt{git}, por isso tenha cuidado e pesquise tudo
+antes de executar um comando. A parte ruim dessa ferramenta é que os tutoriais
+e a documentação, apesar de rigorosos e claros, não são didáticos, então boa
+sorte! Espero que este manual ajude a entender ao menos o que você deve fazer e
+sirva como um guia para os vários nomes que eu tive que descobrir com várias
+horas de pesquisas.
+
+\mainmatter
+
+% Incluímos o manual ;)
+\chapter{Preparando para edição}
+
+\section{Instalação de ferramentas}
+
+No caso do Linux, além do seu editor de texto preferido, precisará de alguns
+pacotes para compilar o manual (e a maioria dos projetos) em \LaTeX:
+
+\begin{multicols}{2}
+\begin{itemize}[noitemsep] % tirar espaço entre os itens
+\item \texttt{git}
+\item \texttt{scons}
+\item \texttt{texlive-bin}
+\item \texttt{texlive-core}
+\item \texttt{texlive-fontsextra}
+\item \texttt{texlive-pictures}
+\item \texttt{texlive-latexextra}
+\item \texttt{texlive-formatextra}
+\item \texttt{texlive-bibtexextra}
+\end{itemize}
+\end{multicols}
+
+Crie, se não possuir, uma conta no GitHub (lembre-se de que, se você adicionar
+algum e-mail da Unicamp -- seja como secundário ou principal --, poderá
+adquirir uma conta de desenvolvedor).
+
+\section{Configuração de projeto}
+
+Em GitHub, a rede social de compartilhamento de código com suporte a ferramenta
+\texttt{git}, suporta a clonagem de projetos para a sua conta, assim você pode
+fazer coisas que para você talvez pareçam complexas, como pedir para seu código
+ser anexado ao projeto principal ou ainda criar um projeto paralelo com base em
+outro. Este processo de clonagem chama-se \emph{forking}.
+
+Abra a página do manual no GitHub e crie uma \emph{fork} do manual na sua conta
+(clique em \emph{“Fork”} no topo da página). Após ser redirecionado ao
+repositório -- nome dado ao conjunto de arquivos do seu projeto, seja local
+ou remoto -- na sua conta, copie o endereço dado em \emph{“Clone or download”}.
+Abra, então, o terminal, navegue até a pasta que gostaria de possuir a pasta do
+manual e utilize o comando:
+
+\begin{center}
+\texttt{git clone https://github.com/(seu usuário)/Manual-do-Bixo.git}
+\end{center}
+
+O download do repositório irá começar (e irá demorar um pouco). Por ter feito
+um clone, o seu projeto no \texttt{git} terá a configuração de \emph{“remote”},
+que é um \emph{link} para o repositório na nuvem, ou seja, é a ligação que
+\texttt{git} usará para enviar/receber informações, sincronizando o projeto.
+Você pode verificar os \emph{remotes} disponíveis utilizando o comando:
+
+\begin{center}
+\texttt{git remote -v}, onde \texttt{-v}, \texttt{--verbose} é usado para
+mostrar detalhes
+\end{center}
+
+Notará que há apenas a ligação para o seu repositório no GitHub -- nomeada
+por convenção de \emph{origin}. O \emph{link} para o qualquer outro \emph{fork}
+ou para o repositório do CACo será necessário para a colaboração no projeto
+comunitário. Por convenção, adicionaremos o ponto zero do projeto, o
+repositório do CACo, com o nome de \emph{upstream}. Vá até a página do projeto
+no GitHub do CACo, pegue o endereço do repositório através do \emph{“Clone or
+download”} e utilize o comando:
+
+\begin{center}
+\texttt{git remote add (nome) (endereço)}
+\end{center}
+
+No nosso caso:
+\begin{center}
+\texttt{git remote add upstream
+https://github.com/cacounicamp/Manual-do-Bixo.git}
+\end{center}
+
+Com isso, será possível sincronizar com o projeto comunitário através da
+ligação nomeada \emph{upstream}, já que o \emph{origin} refere-se apenas ao
+\textbf{seu} repositório no GitHub, que não é o ponto central do projeto. Oh,
+desculpe, não quis parecer rude, sua participação é importante. Se te faz
+sentir melhor, você é o centro do nosso projeto como centro acadêmico.
+
+Agora você tem tudo pronto! Pode conferir o estado da sua \emph{branch} --
+algo similar a uma ``linha do tempo'' -- com relação aos arquivos modificados
+e sincronização com algum \emph{remote} usando:
+
+\begin{center}
+\texttt{git status}
+\end{center}
+
+\section{Conceitos importantes de \texttt{git}}
+
+\subsection{O que é uma \emph{branch}?}
+
+Uma \emph{branch} é algo criado a partir da ramificação do projeto que permite
+alterá-lo independentemente do outro ramo. Por padrão, o ramo principal é
+chamado de \emph{master}, aqui você aprenderá a fazer suas contribuições para o
+manual através de \emph{branches} nomeadas de maneira breve com o fim de
+descrever o que ela altera.
+
+Imagine que a \emph{branch master}, o ramo principal do nosso projeto visto
+como uma árvore, é o tronco. Imagine que cada centímetro de altura é uma
+mudança no projeto. As ramificações criadas são galhos que saem de algum ponto
+do tronco, ou seja, \emph{branches} precisam de um ponto de partida, uma altura
+da qual o galho começa a crescer.
+
+A partir do ponto mais recente do projeto, o topo do tronco, a alteração mais
+recente da \emph{branch master}, é onde você (normalmente) cria as
+ramificações. A partir delas, você pode fazer mudanças que não interferem no
+caminho principal do projeto, o que é útil para desenvolvimento, teste ou mesmo
+experimentos. Isso é importante em projetos comunitários pois permite a
+implementação, correção ou até remoção de alguma parte do projeto facilmente.
+
+\subsection{Entendendo por que uma \emph{branch} se assemelha a uma ``linha do
+tempo''}
+
+Eu chamei \emph{branch} de linha do tempo pois, ao criar uma, você passa a
+modificar seu trabalho independente das outras \emph{branches}, as suas
+alterações são totalmente independentes do resto do projeto. Imagine um
+aplicativo como o \emph{WhatsApp}. Os desenvolvedores querem fazer algo decente
+finalmente: uma versão desktop que não depende do celular conectado a todo
+momento.
+
+Imagine que usam a \emph{branch master} para a linha do tempo que irá para as
+lojas de aplicativos. Eles criam a \emph{branch desktop-app}, por exemplo, para
+modificar o aplicativo de tal forma que permita você conectar com o celular
+apenas quando cria novas conversas (pela questão de encriptação de
+ponta-a-ponta). Eles desenvolvem essa \emph{feature} enquanto outros
+desenvolvedores corrigem bugs, melhoram a performance, ou seja, totalmente
+independente da questão de transformar a versão desktop em algo bom. Isso
+evita, ainda, a liberação para o público antes de tudo funcionar perfeitamente.
+
+Para imaginarmos a situação em que não usam \emph{branches}, todos os
+desenvolvedores estariam alterando os mesmos arquivos juntos, misturando todo o
+código antigo com o código de correção de bugs e melhora performance com o
+código da nova \emph{feature} e, além disso, não poderiam liberar as correções
+até tudo estiver funcionando, já que, neste mundo, tudo estaria na
+\emph{master} e não iriam liberar uma \emph{feature} quebrada. Além disso,
+reverter alterações seria muito mais complexo sem ramificações.
+
+\subsection{Entendendo a ideia de \emph{pull request}}
+
+Espero que tenha entendido o que é uma \emph{branch}, pois iremos utilizá-la!
+Já que o centro do manual fica na conta do GitHub do CACo, a ideia é que você
+faça uma \emph{branch} apenas com a alteração direta do que quer fazer para
+fazer uma \emph{pull request} no GitHub. Você já vai entender o que queremos
+dizer.
+
+Pode não ser o caso, mas imagine que pegou a versão impressa do Manual d* Bix*
+do ano anterior e marcou com marca texto as partes que gostaria de alterar, ou
+seja, você tem uma lista de coisas para alterar na versão deste ano, coisas que
+podem estar na mesma categoria ou não. Para não precisar fazer 54 \emph{pull
+requests} sobre cada coisinha que você quer alterar, mas, ao mesmo tempo, não
+juntar tudo em apenas uma, tornando todas as alterações um pouco vagas e
+impedindo que o projeto seja retrocedido caso precisasse, você precisa juntar
+em mesma categoria as mudanças parecidas.
+
+Por exemplo, tem 5 referências a restaurantes que não existem mais, a ideia da
+\emph{pull request} é fazer a alteração direta e bem descrita em uma linha. No
+nosso exemplo, a \emph{pull request} se chamaria ``Removendo restaurantes que
+fecharam'' e a \emph{branch}, algo como \texttt{remover-restaurantes}. A
+\emph{pull request} alteraria quantos arquivos precisarem, mas abordaria todas
+as remoções de restaurantes que fecharam entre este ano e o ano pasado.
+
+O caso problemático seria se fizesse uma \emph{pull requests} para cada
+restaurante removido, precisando da aprovação individual de cada uma para ser
+aceito na \emph{branch master} do projeto. Ou ainda, se fizesse uma \emph{pull
+request} para todas as 54 alterações, mas tivesse removido por engano um
+restaurante que continua aberto, fazendo outra pessoa (ou você mesmo) ter que
+reescrever a parte do manual, já que não seria prático reverter uma \emph{pull
+request} tão grande.
+
+Ou seja, faça as alterações em conjunto, assim podem ser revertidas e
+re-alteradas se precisar, sem a necessidade de movimentar uma quantidade
+enor\-me de mudanças ou movimentar dezenas de vezes pequenas mudanças. Trata-se
+de um equilíbrio.
+
+
+\chapter{Modificando o manual}
+
+\section{Preparando o seu repositório para mudanças}
+
+Há alguns passos a seguir para evitar a desordem do seu repositório local. Essa
+desordem pode te obrigar a recomeçar o projeto em uma outra pasta ou ainda
+fazer uma complicada sequência de comandos. A primeira dica é não utilizar a
+\emph{branch master}, deixe ela parada para ser uma cópia da \emph{branch
+upstream/master} (esta é a notação usada para identificação de uma
+\emph{branch} em algum \emph{remote}), assim você sempre terá o estado atual do
+projeto comunitário sem precisar baixar mais nada.
+
+\subsection{Sincronização com o projeto}
+
+Antes de sair criando \emph{branches} para todas as suas 54 alterações, já que
+você descobriu que é ruim fazer tudo na \emph{master}, é necessário uma
+sincronização com o repositório do CACo, aquele cujo \emph{remote} é nomeado
+\emph{upstream}. Isso deve ser feito no mínimo 2 vezes: quando a \emph{branch}
+é criada e quando todas as alterações tiverem sido realizadas, logo antes da
+\emph{pull request} ser criada, assim as suas alterações se fundirão
+automaticamente, visto que a sincronização resolve colisões -- você entenderá o
+que são colisões em breve.
+
+Para realizar a sincronização, você tem algumas opções:
+
+\begin{itemize}%[noitemsep]
+\item Deixar a sua \emph{branch master} sincronizada com a
+  \emph{upstream/master} e fazer qualquer nova \emph{branch} partindo da sua
+  \emph{master} local.
+\item Ignorar a existência da sua \emph{branch master} e fazer a nova
+  \emph{branch} a partir da \emph{upstream/master}.
+\item Misturar os dois, mantendo sua \emph{branch master} atualizada (caso você
+  precise do PDF atual do manual, no nosso caso), mas partindo da \emph{branch
+  upstream/master} na criação da sua nova \emph{branch}, para ter certeza que
+  sempre partirá do estado mais recente do projeto.
+\end{itemize}
+
+Recomendamos a última, visto que o trabalho de sincronização não é difícil
+quando as mudanças não colidem. É recomendável que você esteja \textbf{SEMPRE}
+sincronizado, evitando uma bola de neve de colisões. Mas, afinal, o que são
+colisões?
+
+Colisões ocorrem quando há alterações na \emph{upstream/master} em arquivos que
+você já modificou. Quando o \texttt{git} não consegue solucioná-las
+automaticamen\-te, você precisará fazer a fusão manualmente. Parece difícil,
+mas, na maioria das vezes, basta adicionar as duas versões (a sua e a da
+\emph{upstream}, já que geralmente são adições de parágrafos independentes),
+raramente haverá um caso em que duas pessoas alteraram o mesmo parágrafo ao
+mesmo tempo. Se acontecer, você precisará reescrever o parágrafo fazendo uma
+fusão das ideias das duas modificações ou manter apenas uma ou outra versão. É
+fácil.
+
+Agora que talvez tenha entendido a necessidade da sincronização, explicarei
+como fazê-la. Basta executar o comando a seguir:
+
+\begin{center}
+\texttt{git pull (remote) (branch)}
+\end{center}
+
+Ou, no nosso caso:
+
+\begin{center}
+\texttt{git pull upstream master}
+\end{center}
+
+Esse comando irá baixar (o mesmo que executar \texttt{git fetch upstream
+mas\-ter}) e juntar os arquivos atualizados, baixados com os arquivos locais
+resolvendo colisões se houver (o mesmo que \texttt{git merge FETCH\_HEAD}, onde
+\emph{\texttt{FETCH\_\-HEAD}} é o nome que se dá ao estado do projeto baixado,
+ou seja, é o nome do ponto da linha do tempo que foi baixada).
+
+\subsection{Criando uma \emph{branch}}
+
+Para criar uma \emph{branch}, é necessário um ponto de partida. Como disse
+anteriormente, pode ser um ponto local ou não. Dê preferência ao
+\emph{upstream/master}, já que é o estado atual do projeto comunitário. Usamos
+o comando:
+
+\begin{center}
+\texttt{git branch (nome) remote/branch}
+\end{center}
+
+Temos vários exemplos:
+
+\begin{center}
+\texttt{git branch manual-de-edicao upstream/master}
+
+\texttt{git branch manual-de-edicao origin/master}
+
+\texttt{git branch manual-de-edicao master}, onde \emph{master} é a local
+\end{center}
+
+Note como é sutil a diferença do repositório ligado pelo \emph{remote origin} e
+o repositório local. Em maioria, o repositório em nuvem estará desatualizado em
+relação ao seu repositório local pois é você quem deve enviar as sincronizações
+para ele. Ou seja, se o repositório comunitário (\emph{upstream}) fosse
+atualizado e você tivesse sincronizado localmente, ainda precisaria enviar as
+mudanças para o repositório na nuvem -- logo verá como enviar alterações para
+a nuvem.
+
+Lembra-se que o comando \texttt{git status} mostrava o estado atual dos
+arquivos e a \emph{branch} que estava ativa? Não se esqueça de mudar para a
+\emph{branch} desejada usando:
+
+\begin{center}
+\texttt{git checkout (branch)}
+\end{center}
+
+Se houver arquivos modificados, o comando irá falhar, pois mudar entre
+\emph{branches} apagaria as mudanças que não foram guardadas através de
+\emph{commits}. Você pode guardar as mudanças numa pilha e restaurá-las quando
+quiser, seja no mesmo \emph{branch} ou em outro, usando os comandos:
+
+\begin{itemize}
+\item Para guardar: \texttt{git stash} ou \texttt{git stash
+  --include-untracked} para incluir os arquivos que não foram adicionados ao
+  projeto do \texttt{git} como falarei no futuro.
+\item Para restaurar: \texttt{git stash pop}, que colocará todos os arquivos
+  no estado que foram guardados.
+\end{itemize}
+
+\section{Alterando de fato o manual}
+
+\subsection{Modificando uma \emph{branch}}
+
+Agora você sabe criar e pular de \emph{branch} em \emph{branch}, como um
+verdadeiro macaco (não confundir com o movimento anti-CACo!). Basta, então,
+modificar os arquivos e usar o comando \texttt{scons} na raiz do projeto para
+compilar o PDF do manual e testar suas modificações. Verá que \LaTeX é uma
+linguagem fácil de entender e escrever, ``ver e repetir'' é uma técnica que
+funciona incrivelmente bem!
+
+Leia as considerações importantes no \emph{README.md} no projeto do Manual d*
+Bix* no GitHub! Respeite as convenções de edição, inclusive a de que toda regra
+tem exceção se você achar necessário.
+
+\subsection{Salvando as modificações}
+
+Em \texttt{git}, apenas alguns arquivos são guardados como do projeto (arquivos
+temporários, auxiliares ou de configuração são muitas vezes deixados de fora).
+Esses arquivos são chamados de \emph{staged files}, são aqueles adicionados e
+modificados em cada \emph{commit}, aqueles baixados pelo GitHub, considerados
+``arquivos DO projeto''.
+
+Para adicionar um arquivo novo ao projeto ou adicionar as modificações a uma
+\emph{commit}, você utiliza o comando:
+
+\begin{center}
+\texttt{git add (arquivo 1) (arquivo 2) ... (arquivo n)}
+\end{center}
+
+Poderá verificar os arquivos adicionados ao que virá a ser o \emph{commit}
+usando o comando \texttt{git status}. Renomear um arquivo pode ser algo
+complexo, pois \texttt{git} não perceberá tão automaticamente que tal arquivo
+que foi removido é aproximadamente igual àquele que foi adicionado. Para evitar
+essas atrapalhadas, use \texttt{git rename} para renomear e \texttt{git remove}
+para remover arquivos.
+
+Finalmente, para criar uma \emph{commit}, guardando todas as alterações dos
+arquivos adicionados em relação ao ``estado'' anterior da \emph{branch},
+utilize o comando:
+
+\begin{center}
+\texttt{git commit}
+\end{center}
+
+O \texttt{git} abrirá o seu editor preferido (você pode mudar qual é usando as
+configurações globais, pesquise como fazer se quiser) para escrever a mensagem
+que descreve as alterações. O GitHub reconhecerá a primeira linha (dependendo
+do seu comprimento) como o nome da \emph{commit}, as outras linhas só
+aparecerão ao abrí-la no navegador e servem de descrição.
+
+A \emph{commit} estará associada a \emph{branch} e guardará as diferenças dos
+arquivos adicionados à \emph{commit} em relação ao estado anterior do projeto.
+Recomendei o uso dos comandos de renomear e excluir do \texttt{git} pois para
+adicionar um novo arquivo e apagar outro manualmente como \emph{staged file} é
+um pouco mais trabalhoso.
+
+\section{Enviando as alterações para a nuvem}
+
+Agora que você já fez várias \emph{commits} e talvez tenha acabado tudo o que
+sua \emph{branch} representava, está na hora de enviar para a nuvem! Para isso,
+basta utilizar:
+
+\begin{center}
+\texttt{git push (remote) (branch)}
+\end{center}
+
+Apesar de talvez achar que é improvável você criar várias \emph{branches}
+simultaneamente e precisar enviar juntas várias alterações à nuvem, é mais
+comum do que parece. Um exemplo que acontecerá é o caso da
+\emph{upstream/master} ter sido atualizada, assim é recomendável que você
+sincronize todas as suas \emph{branches}, fazendo o que \texttt{git} chama de
+\emph{merge}, o trabalho de juntar \emph{branches} em um ponto comum resolvendo
+conflitos e criando uma \emph{commit}. Então, para facilitar e enviar as
+\emph{commits} de todas as \emph{branches} (ao invés de mandar uma por uma),
+poderá usar o comando:
+
+\begin{center}
+\texttt{git push (remote) --all}
+\end{center}
+
+Se abrir seu GitHub após criar a \emph{branch} e enviar algumas \emph{commits},
+verá que agora existe a \emph{branch} criada na lista e que há \emph{commits}
+que não estão na fonte do seu projeto (\emph{``\texttt{x} commits ahead of
+cacounicamp/Manual-do-Bixo''}), ou seja, na \emph{upstream}. Haverá um botão
+para criar uma \emph{pull request}, onde você pode descrever as mudanças ou até
+pedir participação de outras pessoas se precisar, pois, assim como você usou a
+\emph{cacounicamp/Ma\-nual-Do-Bixo} como \emph{upstream}, fonte do projeto,
+outra pessoa pode usar o seu repositório e participar de forma recursiva.
+
+Após criada a \emph{pull request}, membros do CACo poderão revisar e aprovar as
+modificações ao manual, verificando regras, se tudo foi compilado com
+excelência através de uma métodologia rígida de \emph{try and error} que os
+membros do CACo estão acostumados a fazer.
+
+\subsection{O que aprendemos até aqui}
+
+Agora você aprendeu a sincronizar o repositório local com o remoto, seja ele
+a \emph{upstream} ou o seu \emph{origin}, seja enviando ou recebendo
+informações. Aprendeu também a criar \emph{branches} e alterá-las adicionando
+\emph{commits}. Por fim, aprendeu a enviar as mudanças ao GitHub e criar
+\emph{pull requests}, que era o passo final para a participação individual no
+projeto.
+
+No próximo capítulo, aprenderemos a limpar o seu repositório, local e remoto,
+a \emph{origin}, após suas mudanças forem verificadas e aprovadas no projeto
+principal. Veremos em outro ainda como participar em grupo numa \emph{pull
+request}, que servirá também aos membros da gestão a manterem o manual,
+ajudando os colaboradores com as regras.
+
+
+\chapter{Cuidando do repositório após mudanças}
+
+a
+
+\chapter{Mantendo o repositório remoto e revisando colaborações}
+
+a
+
+\end{document}
