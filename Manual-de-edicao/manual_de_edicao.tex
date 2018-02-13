@@ -55,22 +55,22 @@
 
 Como você já viu, o Manual d* Bix* é uma das tradições do CACo que tem um
 grande impacto, em especial por conter diversas informações úteis para quem
-está chegando na Unicamp, além disso, é um ótimo jeito de apresentarmos o
-centro acadêmico. Nosso manual é, de certa forma, uma referência na Unicamp por
-ter um conteúdo bem atualizado e completo, mas isso tem um custo: temos que
-revisá-lo todo ano. Nossa tática é concentrar o trabalho de edição no fim do
-ano, começando entre outubro e novembro (na calmaria, antes do caos das provas
+está chegando na Unicamp, além disso, é um ótimo jeito de apresentar o centro
+acadêmico. Nosso manual é, de certa forma, uma referência na Unicamp por ter um
+conteúdo bem atualizado e completo, mas isso tem um custo: temos que revisá-lo
+todo ano. Nossa tática é concentrar o trabalho de edição no fim do ano,
+começando entre outubro e novembro (na calmaria, antes do caos das provas
 finais) e dando um gás em dezembro, logo após o fim das aulas.
 
 É fácil perceber que isso não é um trabalho simples e requer a participação em
 peso da gestão, mas, ao mesmo tempo, por utilizar \texttt{git} e \LaTeX, isso
 pode ser um tanto quanto impeditivo para a participação de novas pessoas que
-não tem tanta familiaridade com essas ferramentas. Por isso, aqui tentamos
-deixar um guia de como começar a colaborar. Tornando assim mais a fácil a
-participação de outros, além de ter uma forma de registrar as coisas que
-funcionaram bem no passado.
+não tem tanta familiaridade com essas ferramentas. Por isso, aqui tento deixar
+um guia de como começar a colaborar. Tornando assim mais a fácil a participação
+de outros, além de ter uma forma de registrar as coisas que funcionaram bem no
+passado.
 
-Consideração importante: \texttt{git} é uma ferramenta muito poderosa. Como
+Consideração importante: \texttt{git} é uma ferramenta muito poderosa e, como
 sabemos, com grande poder, vem grandes responsabilidades. Fazer caquinha é
 \textbf{MUITO} fácil em \texttt{git}, por isso tenha cuidado e pesquise tudo
 antes de executar um comando. A parte ruim dessa ferramenta é que os tutoriais
@@ -78,6 +78,14 @@ e a documentação, apesar de rigorosos e claros, não são didáticos, então b
 sorte! Espero que este manual ajude a entender ao menos o que você deve fazer e
 sirva como um guia para os vários nomes que eu tive que descobrir com várias
 horas de pesquisas.
+
+Justamente por ser uma ferramenta muito poderosa, há muitos caminhos para fazer
+diversas coisas. O caminho mostrado aqui foi o que eu conheci e achei mais
+didático. Muito provavelmente existe um caminho mais fácil para fazer o que fiz
+e, com certeza, há um caminho mais difícil, então use o manual para aprender a
+colaborar, mas não use como guia definitivo de \texttt{git}.
+
+Nós, membros do CACo, agradecemos a colaboração! Espero que goste do manual.
 
 \mainmatter
 
@@ -385,7 +393,7 @@ quiser, seja no mesmo \emph{branch} ou em outro, usando os comandos:
 Agora você sabe criar e pular de \emph{branch} em \emph{branch}, como um
 verdadeiro macaco (não confundir com o movimento anti-CACo!). Basta, então,
 modificar os arquivos e usar o comando \texttt{scons} na raiz do projeto para
-compilar o PDF do manual e testar suas modificações. Verá que \LaTeX é uma
+compilar o PDF do manual e testar suas modificações. Verá que \LaTeX\, é uma
 linguagem fácil de entender e escrever, ``ver e repetir'' é uma técnica que
 funciona incrivelmente bem!
 
@@ -412,8 +420,8 @@ Poderá verificar os arquivos adicionados ao que virá a ser o \emph{commit}
 usando o comando \texttt{git status}. Renomear um arquivo pode ser algo
 complexo, pois \texttt{git} não perceberá tão automaticamente que tal arquivo
 que foi removido é aproximadamente igual àquele que foi adicionado. Para evitar
-essas atrapalhadas, use \texttt{git rename} para renomear e \texttt{git remove}
-para remover arquivos.
+essas atrapalhadas, use \texttt{git mv} para renomear e \texttt{git rm} para
+remover arquivos.
 
 Finalmente, para criar uma \emph{commit}, guardando todas as alterações dos
 arquivos adicionados em relação ao ``estado'' anterior da \emph{branch},
@@ -491,10 +499,51 @@ ajudando os colaboradores com as regras.
 
 \chapter{Cuidando do repositório após mudanças}
 
-a
+Antes de sair apagando \emph{branches} que já foram aceitas no projeto
+principal, deixe-as abertas por um tempo. Caso algum problema estivesse passado
+pela revisão dos mantenedores do projeto, a sua alteração deverá ser revertida
+e revisada. A maneira mais rápida e fácil para arrumar o erro acontece se a
+\emph{branch} estiver ainda ativa, pois bastará fazer algumas alterações para
+tornar a \emph{pull request} válida novamente.
+
+O que quero dizer é que você deve esperar alguns dias ou mesmo horas até a sua
+alteração ser consolidada no projeto. A razão para isso é que, no projeto do
+Manual d* Bix* do CACo, as \emph{commits} são transformadas em uma, tornando
+mais limpo o histórico do projeto no geral, mas com o custo de desorganizar os
+repositórios locais após terem suas mudanças aceitas. Ou seja, após uma
+\emph{pull request} ter sido aceita, a sua \emph{branch} se tornará
+incompatível com o projeto e não poderá ser facilmente re-utilizada, senão com
+a reversão da \emph{pull request} em casos de erro.
+
+\section{Excluindo a \emph{branch} local e remota}
+
+Se já passou um tempo desde quando sua \emph{pull request} foi revisada e
+aceita, podemos começar a limpar o seu repositório local. Primeiro, apagamos a
+\emph{branch} que originou a \emph{pull request} utilizando o comando:
+
+\begin{center}
+\texttt{git branch -D (branch)}
+\end{center}
+
+A opção \emph{\texttt{-D}} vem de \emph{\texttt{--delete --force}}, você
+precisa forçar a exclusão já que tornar as várias \emph{commits} em uma única
+no repositório do CACo implicará na incompatibilidade da sua \emph{branch},
+visto que \texttt{git} não reconhecerá que os arquivos estão identicos no
+final, mas sim que a quantidade de \emph{commits} são diferentes.
+
+Para enviar uma exclusão de \emph{branch} para o repositório remoto, utilize o
+comando:
+
+\begin{center}
+\texttt{git push (remote) -d (branch)}, onde \emph{\texttt{-d}} significa
+deletar
+\end{center}
+
 
 \chapter{Mantendo o repositório remoto e revisando colaborações}
 
-a
+A necessidade disso tudo (separar em \emph{branches}, fazer \emph{pull
+requests}) já foi comentada. É uma maneira de desenvolver facilmente em grupo,
+seja mantendo o código como membro do CACo ou ainda como colaborador.
 
 \end{document}
