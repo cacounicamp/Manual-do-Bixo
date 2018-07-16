@@ -22,14 +22,12 @@ Como contribuir
 ---------------
 
 Você pode mandar sugestões na
-[lista](http://groups.google.com/group/cacounicamp) de emails do
-[CACo](https://www.caco.ic.unicamp.br). Se estiver disposto a contribuir mais
-seriamente, você pode abrir participar desse repositório no GitHub e mandar
-alterações.
-
-Dentro da pasta "Manual-de-edicao", encontrará um PDF de um manual amigável
-para você aprender a configurar o projeto e participar sem grandes complicações
-com as ferramentas utilizadas!
+[lista de emails](http://groups.google.com/group/cacounicamp) do
+[CACo](https://www.caco.ic.unicamp.br), através da página de issues desse
+repositório. Se estiver disposto a contribuir mais seriamente, você pode criar
+um fork e seguir o manual de edição, um manual amigável (que encontra-se na
+página releases) para você aprender a configurar o projeto e participar sem
+grandes complicações com as ferramentas utilizadas!
 
 Observe as seguintes convenções:
 
