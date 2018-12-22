@@ -1,0 +1,6 @@
+import os
+
+env = Environment(ENV = os.environ)
+
+manual = env.PDF(target='manual_de_edicao.pdf', source="manual_de_edicao.tex",
+                 PDFLATEX='pdflatex')
