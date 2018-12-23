@@ -3,30 +3,76 @@
 
 \section{Serviços da Unicamp}
 \subsection{Serviços do IC -- Instituto da Computação}
+\label{sec:ic_servicos}
 
-O IC oferece às alunas e aos alunos de computação cotas de impressão (assim
-como a FEEC): você consegue imprimir inicialmente 100 páginas e a cada troca de
-semestre recebe mais 100 páginas (a partir do segundo ano, passa a receber 200
-páginas por semestre, com teto de 400 páginas).
+O IC oferece às alunas e aos alunos de computação acesso aos laboratórios no
+prédio IC-3, das salas 300 a 305. O código das salas do IC-3 e IC-3,5 são na
+forma \texttt{CC<últimos algarismos da sala>}, por exemplo, CC01/CC02 para a
+sala 300 (elas eram separadas em 301 e 302, por isso dois códigos) e CC53 para a
+sala 353.
 
-Há também computadores de ótima qualidade com uma internet melhor ainda,
-disponíveis 24/7 durante todo o ano (exceto no natal e ano novo) (acalme-se, é
-proíbido baixar \emph{torrents} ilegais, deixe para baixar filmes ou jogos na
-sua casa). O espaço disponível também é pequeno, 2GB, então sempre tenha um
-pendrive na mochila e abuse da pasta \emph{/tmp}, uma pasta local temporária --
-os arquivos somem ao reiniciar a máquina -- cujo espaço livre é muito maior que
-2GB).
+Os laboratórios são equipados com computadores excelentes e redes de alta
+velocidade, ficam abertos 24/7 durante todo o ano (exceto natal e ano novo). É
+proíbido o uso da rede ilegalmente (por exemplo, utilizar \emph{torrents} ou
+\emph{streaming} de filmes distribuídos ilegalmente, então acalme-se: ainda
+terá que fazer isto na sua casa). No entanto, é permitido dormir nos
+laboratórios, assistir séries em serviços legais como a Netflix, ouvir música,
+baixar qualquer coisa legalmente (sim! você pode usar \emph{torrent} para fazer
+download do seu Linux predileto).
 
-Através de um serviço chamado \emph{SSH}, você pode acessar seus arquivos
-remotamente por outro computador (ou até celular). Há editores que funcionam
-pelo terminal, como \texttt{vim}, \texttt{nano}, \texttt{emacs} etc., que
-quebra um galho quando você está no Windows ou celular, por exemplo.
+Os computadores são acessados por um credencial único do IC. Este login/senha é
+utilizado para o endereço de e-mail em \texttt{students.ic.unicamp.br}, para os
+serviços LMS -- laboratório da Microsoft -- e provavelmente para qualquer outro
+serviço do IC, mas há uma exceção: a senha do Windows é independente deste
+credencial único, então guarde bem ou sempre o mantenha atualizado! Para
+alterar a senha no Linux, utilize o comando \texttt{`passwd'}. No Windows, pode
+fazer isto no menu \texttt{ctrl-alt-del}.
 
-Além desses serviços já excelentes, há um e-mail do IC, que iremos falar mais
-tarde. Você pode encontrar mais informações no endereço:
+A pasta \texttt{/home} ou \emph{"Documentos"} no Windows é guardada no servidor
+do IC, ou seja, em qualquer máquina que você logar, terá acesso aos seus
+arquivos. Isso é uma faca de dois gumes: por um lado, pode entrar e sair de
+qualquer computador dentro do IC tendo seus arquivos com você, pelo outro, a
+velocidade é limitada, as vezes você passará raiva. A cota de armazenamento
+também é pequena, 2GB para cada estudante de graduação. Você pode verificar
+sua cota utilizando o comando \texttt{`quota'} no Linux e confundindo TODA VEZ
+qual coluna deve verificar.
+
+Para burlar a quantidade de armazenamento definido pela cota, para baixar
+coisas grandes mas temporárias por exemplo, utilize um pendrive e/ou abuse da
+pasta \texttt{/tmp} do Linux -- uma pasta que é apagada toda vez que o
+computador reinicia --. Como a pasta \texttt{/tmp} é local, a velocidade é
+muito superior e você pode instalar coisas nela (como o editor Atom, que não
+está disponível em todas as máquinas: basta extrair o arquivo comprimido e
+executar, não dependendo da conexão com o servidor do IC e não gastando espaço
+de armazenamento). No entanto, ninguém do IC recomenda isso para seus arquivos
+de projetos, é apenas uma solução para quebrar o galho.
+
+Como avisamos na seção~\ref{sec:email_unicamp}
+(página~\pageref{sec:email_unicamp}), você receberá este credencial nas
+primeiras aulas de laboratório, mas, se não recebeu, pode pegar na Secretaria
+de Graduação, na entrada do prédio IC-2, ao lado do prédio das Artes Cênicas,
+acima da Economia.
+
+Além disso, há cotas de impressão (assim como na FEEC): você consegue imprimir
+inicialmente 100 páginas e a cada troca de semestre recebe mais 100 páginas (a
+partir do segundo ano, passa a receber 200 páginas por semestre, com teto de
+400 páginas). Apesar da cota ser muito generosa, trata-se de dinheiro público,
+então não desperdice! O nome da impressora é \texttt{`prgrad'}, lembre-se de
+colocar nas configurações de página o tamanho de folha A4 para evitar problemas
+de impressão.
+
+Através de um serviço chamado \emph{SSH}, você pode acessar sua conta no
+servidor do IC remotamente por outro computador (ou até celular). Há editores
+que funcionam pelo terminal, como \texttt{vim}, \texttt{nano}, \texttt{emacs}
+etc., que quebra um galho quando você está no Windows ou celular, por exemplo.
+Você consegue utilizar todos os programas que conseguiria pelo terminal, que
+são vários. Há programas que permitem o acesso de arquivos por este serviço,
+então não precisa voltar no IC para pegar seu projeto!
+
+Você pode encontrar mais informações no endereço:
 
 \begin{center}
-\url{www.students.ic.unicamp.br/grad.pdf}
+\url{suporte.ic.unicamp.br/alunos} % Esse link também está em email.tex!
 \end{center}
 
 \subsection{Atendimento médico e odontológico -- CECOM, Centro de Saúde da
