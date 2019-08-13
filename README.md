@@ -9,6 +9,15 @@ da Unicamp.
 Dependências
 ------------
 
+Primeiramente, para clonar o repositório, recomendamos ignorar todo o
+histórico de alterações e baixar apenas o estado atual (a não ser que
+você esteja tentando fazer algo muito louco):
+
+```
+$ git clone --depth 1 --branch master (endereço .git do repositório para clone)
+```
+
+Dependemos dos seguintes itens:
  - Distribuição de LaTeX (preferencialmente o texlive)
  - Fonte atual: TeX Gyre Pagella
  - Scons para construção automatizada
