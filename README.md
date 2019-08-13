@@ -5,18 +5,39 @@ Este é o Manual d* Bix*, criado pelo Centro Acadêmico da Computação, CACo,
 distribuído aos ingressantes nos cursos de engenharia e ciência da computação
 da Unicamp.
 
+
+Dependências
+------------
+
+Primeiramente, para clonar o repositório, recomendamos ignorar todo o
+histórico de alterações e baixar apenas o estado atual (a não ser que
+você esteja tentando fazer algo muito louco):
+
+```
+$ git clone --depth 1 --branch master (endereço .git do repositório para clone)
+```
+
+Dependemos dos seguintes itens:
+ - Distribuição de LaTeX (preferencialmente o texlive)
+ - Fonte atual: TeX Gyre Pagella
+ - Scons para construção automatizada
+
+No Ubuntu, são necessários os pacotes: `texlive texlive-bibtex-extra
+texlive-lang-portuguese texlive-science texlive-pictures` com os recomendados
+instalados a partir do gerenciador de aplicativos.
+
+
 Compilando
 ----------
 
-O build system utilizado é o scons.
+O sistema de construção utilizado é o `scons`, por ser bem compatível com
+Latex.
 
- - Para compilar o manual: `scons`
+ - Para compilar o manual, execute: `scons`
  - Para limpar os arquivos temporários de compilação: `scons --clean`
+ - Para construções diárias (por exemplo, no servidor), adicione o script
+   `build.sh` à crontab do usuário Linux.
 
-Dependências:
-
- - Distribuição de LaTeX (utilize preferencialmente o tex-live)
- - Fonte atual: TeX Gyre Pagella
 
 Como contribuir
 ---------------
@@ -51,6 +72,7 @@ Observe as seguintes convenções:
 
 Como qualquer lista de regras, elas podem ser quebradas dado um bom argumento =)
 
+
 Manutenção de versões
 ---------------------
 
@@ -58,9 +80,13 @@ Para cada versão completada:
  - Crie uma "tag" no Github após a última "commit" estável. Seu nome deve ser
    no formato "v{ANO}" onde {ANO} é o ano de quatro dígitos em que o manual
    será distribuído.
- - Anexe o PDF compilado e unificado com a capa e o verso do Manual à "tag"
+ - Anexe o PDF compilado e unificado com a capa e o verso do Manual à _tag_
    criada. Você pode unificar usando o comando `pdfunite`.
  - Peça um orçamento à Editora da Unicamp do Manual com as especificações de
    folha encontradas nas primeiras páginas do manual.
- - Passe o orçamento ao financeiro do IC através do CACo e confirme a impressão
-   com a editora.
+ - Passe o orçamento ao financeiro do IC através do CACo e confirme a
+   impressão com a editora, enviando os arquivos da _tag_ do GitHub.
+ - Quando forem chamados para verificar a impressão de teste, verifique todos
+   os detalhes da capa. Não tenham vergonha de dizer que não ficou bom à
+   gráfica.
+
