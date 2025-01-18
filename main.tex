@@ -1,0 +1,89 @@
+% \documentclass[a4paper,10pt,oldfontcommands]{memoir}
+\documentclass{book}
+
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+
+\usepackage{manual_template}
+% tem que decidir uma fonte legal
+% https://tug.org/FontCatalogue/typewriterfonts.html
+\usepackage{layouts}
+\usepackage{todonotes}
+\usepackage{multicol}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+
+% para gerar texto lixo
+\usepackage{blindtext}
+\usepackage{lipsum}
+
+%%%%%%%%
+% incluir no template
+\usepackage[most]{tcolorbox}
+\tcbset{
+    frame code={},
+    center title,
+    left=5pt,
+    right=5pt,
+    top=2pt,
+    bottom=2pt,
+    colback=gray!10,
+    colframe=white,
+    width=\dimexpr\textwidth\relax,
+    enlarge left by=0mm,
+    boxsep=5pt,
+    arc=0pt,outer arc=0pt,
+    }
+%%%%%%%%
+
+\title{Manual de Ingressante}
+\author{Centro Acadêmico da Computação}
+\newcommand{\ano}{\the\year}
+\date{\ano}
+\newcommand{\shortauthor}{CACo}
+
+\newcommand{\autoresCapa}{%
+autor1 (EC021) \\
+autor 2 (CC020)
+}%
+
+\newcommand{\autoresDiagramacao}{%
+autora.e (curso) \\
+autora.e (curso) \\
+autora.e (curso)
+}%
+
+\newcommand{\autoresRevisao}{%
+autora.e (curso) \\
+autora.e (curso) \\
+autora.e (curso) \\
+autora.e (curso) \\
+autora.e (curso) \\
+autora.e (curso)
+}%
+
+\newcommand{\gestao}{SynCACo (\ano)}
+
+\begin{document}
+
+\input{_adendos/main}
+
+%\maketitle
+%\tableofcontents
+
+%\setcounter{page}{1}
+
+\include{0_boas_vindas/main} 
+
+\include{1_infraestrutura_unicamp/main}
+
+\include{2_burocracias_e_estudos/main}
+
+\include{3_convivencia_e_respeito/main}
+
+\include{4_vivendo_em_bg/main}
+
+\include{5_alem_da_graduacao/main}
+
+\end{document}
