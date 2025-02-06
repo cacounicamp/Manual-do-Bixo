@@ -13,6 +13,7 @@
 \usepackage[table]{xcolor}
 \usepackage{tabularx}
 \usepackage{wrapfig}
+\usepackage{multirow}
 
 % para gerar texto lixo
 \usepackage{blindtext}
@@ -64,6 +65,9 @@ autora.e (curso)
 }%
 
 \newcommand{\gestao}{SynCACo (\ano)}
+
+%%% Vertically align tabularxcolumn
+\renewcommand\tabularxcolumn[1]{m{#1}}% for vertical centering text in X column
 
 \begin{document}
 
