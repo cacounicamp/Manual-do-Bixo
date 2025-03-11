@@ -23,6 +23,7 @@
 \RequirePackage{fontawesome5}
 % links
 \RequirePackage{hyperref}
+\RequirePackage{ragged2e}
 
 % alguns packages muito utilizados
 %\RequirePackage{appendix}
@@ -100,7 +101,7 @@
     \cs_set:Npn \thechapter {\int_to_bin:n{\value{chapter}-1}}
 \ExplSyntaxOff
 % secao
-\ExplSyntaxOn
+   \ExplSyntaxOn
     \cs_set:Npn \thesection {\int_to_bin:n{\value{section}-1}}
 \ExplSyntaxOff
 % sub-secao ( \thesubsection nao contem a secao - assim nao aparece na toc)
@@ -143,6 +144,8 @@
   {{\color{gray}\generalFont\fontsize{40}{40}\selectfont\thechapter}\hspace{2ex}\color{gray}\bfFont\LARGE}%
 \titlespacing*{\chapter}{0pt}{0pt}{25pt}
 
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
 \makeatletter
 \renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
                     \thispagestyle{fancy}% original style: plain
@@ -151,7 +154,8 @@
                     \secdef\@chapter\@schapter}
 \makeatother
 % Secao
-\titleformat{\section}{\color{darkgray}\bfFont\Large}{\thesection}{1ex}{}
+\titleformat{\shortsection}
+{\color{darkgray}\bfFont\Large}{\thesection\RaggedRight}{1ex}{}
 % Sub secao
 \titleformat{\subsection}{\color{darkgray}\bfFont}{}{5ex}{}
 \endinput
