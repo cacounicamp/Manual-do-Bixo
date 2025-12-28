@@ -1,0 +1,86 @@
+%capa
+.
+\vfill
+{\Huge Aqui é a capa}
+\vfill
+\thispagestyle{empty}\cleardoublepage
+
+%contracapa
+{\color{white}.}
+\vfill
+\begin{center}
+    {\color{darkgray}\bfFont\fontsize{35}{35}\selectfont Manual de Ingressante}
+
+    %imagem
+    \vspace{3em}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[width=0.5\linewidth]{imagens/caco-pb.png}
+    \end{figure}
+    \vspace{3em}
+    %imagem
+
+    \vfill
+    {\color{darkgray}\generalFont\normalsize\selectfont Centro Acadêmico da Computação \\ Universidade Estadual de Campinas \\
+    \vspace{1em}
+    Março \ano
+    \vspace{1em}
+    \begin{tags} \instagram{cacounicamp} \sep \email{caco@ic.unicamp.com}\end{tags}
+    }
+    \vspace{3em}
+
+\end{center}
+\vfill
+\thispagestyle{empty}\cleardoublepage
+
+%licenca e autores
+\begin{center}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=0.3\textwidth]{_adendos/CC-BY-SA.jpg}
+    \end{figure}    
+
+    \vfill
+    {\color{darkgray}\generalFont\normalsize\selectfont
+    
+    Este trabalho está licenciado sob a Licença Attribution ShareAlike 3.0 Brasil da Creative Commons. Para ver uma cópia desta licença, visite: \href{https://creativecommons.org/licenses/by-sa/3.0/br}{creativecommons.org/licenses/by-sa/3.0/br}
+    
+    \vfill
+    Manuais anteriores e seus textos corridos estão disponíveis em: \github{cacounicamp/Manual-do-Bixo}
+
+    \vfill
+    Capa e verso: \\
+    \autoresCapa
+
+    \vfill
+    Diagramação: \\
+    \autoresDiagramacao
+
+    \vfill
+    Revisão: \\
+    \autoresRevisao
+
+    \vfill
+    Gestão \gestao
+    \vfill
+    Diagramado em LaTeX e ilustrado em Figma. \\
+    \vfill
+    Impresso na Gráfica Central da Unicamp em couchê 250g/m2 na capa e offset 75g/m2 no miolo.
+    }
+\end{center}
+%\vfill
+\thispagestyle{empty}\cleardoublepage
+
+
+\clearpage                       % Otherwise \pagestyle affects the previous page.
+{
+  \pagestyle{empty}
+  \fancypagestyle{plain}         % Re-definition removes numbers from first page.
+  {
+    \fancyhf{}%                       % Clear all header and footer fields.
+    \renewcommand{\headrulewidth}{0pt}% Clear rules (remove these two lines if not desired).
+    \renewcommand{\footrulewidth}{0pt}%
+  }
+  \tableofcontents
+  \thispagestyle{empty}
+}

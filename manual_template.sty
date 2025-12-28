@@ -1,0 +1,161 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{manual_template}
+  [2011/01/11 v0.01 LaTeX package for f229 reports]
+
+\RequirePackage{babel}
+% cores -- lightgray, gray, darkgray
+\RequirePackage{xcolor}
+% paginas com header e footers
+\RequirePackage{fancyhdr}
+% pagina sem headers
+\RequirePackage{emptypage}
+% identa o primeiro paragrafo
+\RequirePackage{indentfirst}
+% fonte do titulo e secoes
+\RequirePackage{noto}
+\RequirePackage{expl3}
+% editar toc-table of contents (indice)
+\RequirePackage{tocloft}
+% editar titulos: toc e section
+\RequirePackage{titletoc}
+\RequirePackage{titlesec}
+% possibilita o uso de diversos icones, ver em http://mirrors.ibiblio.org/CTAN/fonts/fontawesome5/doc/fontawesome5.pdf
+\RequirePackage{fontawesome5}
+% links
+\RequirePackage{hyperref}
+\RequirePackage{ragged2e}
+
+% alguns packages muito utilizados
+%\RequirePackage{appendix}
+%\RequirePackage{amsmath}
+\RequirePackage{graphicx}
+%\RequirePackage{multirow}
+%\RequirePackage{subcaption}
+%\RequirePackage{float}
+%\usepackage{biblatex}
+%\addbibresource{ref.bib}
+
+% set page geometry
+\usepackage[verbose=true,a5paper]{geometry}
+\AtBeginDocument{
+  \newgeometry{
+    a5paper,
+    total={148mm,210mm},
+    left=15mm,
+    top=15mm,
+    right=15mm,
+    bottom=15mm,
+  } 
+    
+    % espaço do parágrafo
+    \setlength{\parindent}{1cm}
+    % header
+    \renewcommand{\headrule}{} % tirando a linha de separacao do header
+    \fancyhead[LE]{\confiHeader{\leftmark}}
+    \fancyhead[RO]{\confiHeader{\rightmark}}
+    \fancyhead[C]{}
+    \fancyhead[RE,LO]{\confiHeader\faTerminal\ \bfseries\@title\ \@date}
+    % footer
+    \fancyfoot[RO,LE]{\color{darkgray}\generalFont\thepage}
+    \fancyfoot[C]{}
+    \fancyfoot[LO]{\confiHeader\textbf{\shortauthor}}
+    \fancyfoot[RE]{\confiHeader\textbf{\@author}}
+    %
+    \pagestyle{fancy}
+    % mudando como chapter e section aparecem no header
+    \renewcommand{\chaptermark}[1]{\markboth{\textbf{\thechapter.\ #1}}{}}
+    \renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection.\ #1}}}
+}
+
+%%%% Fonte geral
+\newcommand\notsotiny{\@setfontsize\notsotiny\@vipt\@viipt}
+\newcommand{\generalFont}{\fontfamily{\ttdefault}\fontseries{noto}\selectfont}
+\newcommand{\bfFont}{\generalFont\bfseries}
+\newcommand{\confiHeader}{\color{lightgray}\generalFont\notsotiny}
+
+%%%% Table of contents (toc)
+% titulo
+\renewcommand\cfttoctitlefont{\color{gray}\bfFont\Huge}
+\setlength{\cftbeforetoctitleskip}{-2mm}
+\setlength{\cftaftertoctitleskip}{0mm}
+% capitulos
+\renewcommand\cftchapfont{\color{gray}\bfFont\LARGE}
+\renewcommand\cftchappagefont{\color{gray}\bfFont\LARGE}
+\cftsetindents{chapter}{0em}{4em}
+\renewcommand\cftchapafterpnum{\par\addvspace{2mm}}
+\setlength{\cftbeforechapskip}{5mm}
+% seçoes
+\renewcommand\cftsecfont{\color{darkgray}\bfFont\small}
+\renewcommand\cftsecpagefont{\color{darkgray}\bfFont\small}
+\renewcommand\cftsecafterpnum{\vskip -1mm}
+\cftsetindents{section}{2em}{3.5em}
+% sub-secoes
+\renewcommand\cftsubsecfont{\color{darkgray}\bfFont\footnotesize}
+\renewcommand\cftsubsecpagefont{\color{darkgray}\bfFont\footnotesize}
+\renewcommand\cftsubsecafterpnum{\vskip -1mm}
+\cftsetindents{subsection}{4em}{2.5em}
+
+%%%% Numeracao binária e a partir de 0
+% capitulos
+\ExplSyntaxOn
+    \cs_set:Npn \thechapter {\int_to_bin:n{\value{chapter}-1}}
+\ExplSyntaxOff
+% secao
+   \ExplSyntaxOn
+    \cs_set:Npn \thesection {\int_to_bin:n{\value{section}-1}}
+\ExplSyntaxOff
+% sub-secao ( \thesubsection nao contem a secao - assim nao aparece na toc)
+\ExplSyntaxOn
+    \cs_set:Npn \thesubsection {\int_to_bin:n{\value{subsection}-1}}
+\ExplSyntaxOff
+
+%%%% icones
+\newcommand{\icon}[2]{\color{darkgray}\bfFont #2 \footnotesize #1}
+\newcommand{\sep}{\color{darkgray}~•~ }
+
+\newcommand{\github}[1]{\href{https://github.com/#1}{\icon{#1}{\faGithub}}}
+\newcommand{\gitlab}[1]{\href{https://gitlab.com/#1}{\icon{#1}{\faGitlab}}}
+\newcommand{\discord}[1]{\href{https://discord.gg/#1}{\icon{#1}{\faDiscord}}}
+\newcommand{\email}[1]{\href{mailto:#1}{\icon{#1}{\faEnvelope}}}
+\newcommand{\telegram}[1]{\href{https://t.me/#1}{\icon{#1}{\faPaperPlane[regular]}}}
+\newcommand{\instagram}[1]{\href{https://instagram.com/#1}{\icon{@#1}{\faInstagram}}}
+\newcommand{\facebook}[1]{\href{https://facebook.com/#1}{\icon{/#1}{\faFacebook}}}
+\newcommand{\site}[1]{\icon{\url{#1}}{}}
+\newcommand{\tel}[1]{{\icon{#1}{\faPhone*}}}
+%\faInstagramSquare
+
+\newenvironment{tags}{%
+    \begin{center}%
+    \noindent%
+    }%
+    {%
+    \end{center}%
+    }%
+
+%\newcommand{\github}[2]{\href{http://www.overleaf.com}{Something 
+%Linky}}
+
+%%%% Titulos
+% Capitulos
+\titleformat{\chapter}[display]
+  {}%
+  {}%
+  {0pt}%
+  {{\color{gray}\generalFont\fontsize{40}{40}\selectfont\thechapter}\hspace{2ex}\color{gray}\bfFont\LARGE}%
+\titlespacing*{\chapter}{0pt}{0pt}{25pt}
+
+\titlespacing*{\section}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+\makeatletter
+\renewcommand\chapter{\if@openright\cleardoublepage\else\clearpage\fi
+                    \thispagestyle{fancy}% original style: plain
+                    \global\@topnum\z@
+                    \@afterindentfalse
+                    \secdef\@chapter\@schapter}
+\makeatother
+% Secao
+\titleformat{\shortsection}
+{\color{darkgray}\bfFont\Large}{\thesection\RaggedRight}{1ex}{}
+% Sub secao
+\titleformat{\subsection}{\color{darkgray}\bfFont}{}{5ex}{}
+\endinput
